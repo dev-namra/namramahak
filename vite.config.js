@@ -9,7 +9,4 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
-  css: {
-    postcss: './postcss.config.js',  // Ensure PostCSS is being used
-  },
 })
