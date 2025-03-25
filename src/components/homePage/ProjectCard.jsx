@@ -1,4 +1,4 @@
-import { div } from 'motion/react-client';
+
 import React from 'react';
 
 const ProjectCard = ({ title, category, date, imageUrl, logoUrl, link }) => {
