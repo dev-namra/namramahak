@@ -1,56 +1,94 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import {
-  HomeIcon,
-  UserCircleIcon,
-  FolderIcon,
-  EnvelopeIcon
-} from "@heroicons/react/24/solid";
-
-const navItems = [
-  {
-    label: "Home",
-    href: "/",
-    icon: <HomeIcon className="w-6 h-6" />,
-  },
-  {
-    label: "About",
-    href: "/about",
-    icon: <UserCircleIcon className="w-6 h-6" />,
-  },
-  {
-    label: "Projects",
-    href: "/projects",
-    icon: <FolderIcon className="w-6 h-6" />,
-  },
-  {
-    label: "Contact",
-    href: "/contact",
-    icon: <EnvelopeIcon className="w-6 h-6" />,
-  },
-];
+import React, { useState } from 'react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="fixed mx-auto left-1/2 -translate-x-1/2 z-50 flex items-center justify-around gap-6 my-4 md:my-8 bg-[#1c1a19] py-2 px-4 md:px-8 rounded-xl shadow-md shadow-white/5">
-      {navItems.map(({ label, href, icon }) => (
-        <NavLink
-          key={label}
-          to={href}
-          className={({ isActive }) =>
-            `group flex flex-col items-center gap-3 p-2 transition-all duration-300 rounded-md ${
-              isActive ? "bg-white/10 text-white font-medium border border-white" : "text-gray-400"
-            } hover:text-white`
-          }
-        >
-          <div className="flex flex-col items-center relative">
-            {icon}
-            <span className="text-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 absolute top-full mt-1">
-              {label}
-            </span>
+    <header className="bg-[#f4f4f4] shadow-md">
+      <nav className="max-w-7xl bg-[#fbf4ec] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0 flex items-center">
+            <a href="/">
+              nm.
+            </a>
           </div>
-        </NavLink>
-      ))}
-    </nav>
+
+          {/* Desktop Links */}
+          <div className="hidden md:flex md:items-center md:space-x-8">
+            <a href="/" className="text-black hover:underline px-3 py-2">
+              Home
+            </a>
+            <a href="/about" className="text-black hover:underline px-3 py-2">
+              About me
+            </a>
+            <a href="/cases" className="text-black hover:underline px-3 py-2">
+              Cases
+            </a>
+            <a
+              href="mailto:sarah@meeuw.com"
+              className="ml-4 inline-flex items-center px-4 py-2 border border-transparent rounded-full text-black underline hover:bg-white"
+            >
+              <img
+                src="https://framerusercontent.com/images/kwWGJqjqkaDHrNQQL85ebAFUpc.svg"
+                alt="mail icon"
+                className="w-4 h-4 invert mr-2"
+              />
+              Let’s connect
+            </a>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="flex items-center md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black"
+            >
+              {isOpen ? (
+                <XMarkIcon className="h-6 w-6 text-black" />
+              ) : (
+                <Bars3Icon className="h-6 w-6 text-black" />
+              )}
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="/"
+            className="block text-black hover:underline px-3 py-2 rounded-md"
+          >
+            Home
+          </a>
+          <a
+            href="/about"
+            className="block text-black hover:underline px-3 py-2 rounded-md"
+          >
+            About me
+          </a>
+          <a
+            href="/cases"
+            className="block text-black hover:underline px-3 py-2 rounded-md"
+          >
+            Cases
+          </a>
+          <a
+            href="mailto:sarah@meeuw.com"
+            className="text-black underline px-3 py-2 rounded-md flex items-center"
+          >
+            <img
+              src="https://framerusercontent.com/images/kwWGJqjqkaDHrNQQL85ebAFUpc.svg"
+              alt="mail icon"
+              className="w-4 h-4 invert mr-2"
+            />
+            Let’s connect
+          </a>
+        </div>
+      )}
+    </header>
   );
 }

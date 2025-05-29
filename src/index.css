@@ -1,20 +1,21 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
-.bebas-neue-regular {
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-
-.oswald-custom {
-font-family: "Oswald", sans-serif;
-font-optical-sizing: auto;
-font-weight: 500;
-font-style: normal;
+@keyframes float {
+  0% { transform: translateY(0) rotate(var(--tw-rotate, 0deg)); }
+  50% { transform: translateY(-30px) rotate(var(--tw-rotate, 0deg)); }
+  100% { transform: translateY(0) rotate(var(--tw-rotate, 0deg)); }
+}
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
 }
 
-body {
-  overflow: hidden;
-}
