@@ -1,4 +1,4 @@
-import Profile from '../../../dist/assets/profile.jpg'
+import Profile from '../../assets/person/pp.jpg';
 
 function ProfileCard() {
   return (
