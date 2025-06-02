@@ -57,38 +57,44 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden px-2 pt-2 pb-3 space-y-1">
+        <div className="fixed inset-0 bg-[#fbf4ec] z-50 flex flex-col justify-center items-center space-y-8 p-8">
           <a
             href="/"
-            className="block text-black hover:underline px-3 py-2 rounded-md"
+            className="text-black hover:underline text-3xl font-semibold"
+            onClick={() => setIsOpen(false)}
           >
             Home
           </a>
           <a
             href="/about"
-            className="block text-black hover:underline px-3 py-2 rounded-md"
+            className="text-black hover:underline text-3xl font-semibold"
+            onClick={() => setIsOpen(false)}
           >
             About me
           </a>
           <a
             href="/cases"
-            className="block text-black hover:underline px-3 py-2 rounded-md"
+            className="text-black hover:underline text-3xl font-semibold"
+            onClick={() => setIsOpen(false)}
           >
-            Cases
+            Projects
           </a>
           <a
             href="mailto:sarah@meeuw.com"
-            className="text-black underline px-3 py-2 rounded-md flex items-center"
+            className="text-black underline flex items-center text-3xl font-semibold"
+            onClick={() => setIsOpen(false)}
           >
             <img
               src="https://framerusercontent.com/images/kwWGJqjqkaDHrNQQL85ebAFUpc.svg"
               alt="mail icon"
-              className="w-4 h-4 invert mr-2"
+              className="w-6 h-6 invert mr-3"
             />
             Let’s connect
           </a>
         </div>
       )}
+
+
     </header>
   );
 }

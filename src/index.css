@@ -2,15 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @keyframes float {
-  0% { transform: translateY(0) rotate(var(--tw-rotate, 0deg)); }
-  50% { transform: translateY(-30px) rotate(var(--tw-rotate, 0deg)); }
-  100% { transform: translateY(0) rotate(var(--tw-rotate, 0deg)); }
+  0% {
+    transform: translateY(0) rotate(var(--tw-rotate, 0deg));
+  }
+  50% {
+    transform: translateY(-30px) rotate(var(--tw-rotate, 0deg));
+  }
+  100% {
+    transform: translateY(0) rotate(var(--tw-rotate, 0deg));
+  }
 }
 @keyframes spin-slow {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .animate-float {
   animation: float 3s ease-in-out infinite;
@@ -19,3 +28,15 @@
   animation: spin-slow 8s linear infinite;
 }
 
+@keyframes move-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-move-left {
+  animation: move-left 30s linear infinite;
+}

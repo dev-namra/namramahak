@@ -10,8 +10,8 @@ function Homepage() {
     <div class="bg-[linear-gradient(to_bottom,_#d1c4e9,_#f8bbd0,_#fbe9e7,_#fff9c4)]">
         <ProfileCard />
         <ExperienceSection />
-        <ProjectsSection />
         <PortfolioMarquee />
+        <ProjectsSection />
         <ToolsSection />
         <Footer />
     </div>

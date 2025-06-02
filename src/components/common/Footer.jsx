@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 py-10 px-6 md:px-20">
@@ -22,9 +20,9 @@ export default function Footer() {
         {/* Right Section - Contact & Social */}
         <div className="space-y-4 text-center md:text-left">
           <div>
-            <p>asim@example.com</p>
-            <p>(123) 456-7890</p>
-            <p>456 Portfolio Ave<br />San Francisco, CA 94102</p>
+            <p>mahaknamra@gmail.com</p>
+            <p>(+44) 755266019</p>
+            <p>Newcastle Upon Tyne<br />United Kingdom</p>
           </div>
 
           <div className="flex justify-center md:justify-start space-x-6 text-gray-400">
