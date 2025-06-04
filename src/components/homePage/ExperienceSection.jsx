@@ -1,4 +1,3 @@
-import React from "react";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 

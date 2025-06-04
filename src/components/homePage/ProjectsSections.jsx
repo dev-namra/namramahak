@@ -42,7 +42,7 @@ const projects = [
 ];
 
 const ProjectsSection = () => (
-  <section className="w-full min-h-screen p-4 md:p-16">
+  <section className="w-full min-h-screen p-6 md:p-16">
     <div className="max-w-7xl mx-auto flex flex-col gap-16">
       <h2 className="font-poppins text-4xl md:text-5xl font-semibold text-gray-900 leading-tight">
             My <span className="relative inline-block">

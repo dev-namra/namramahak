@@ -1,15 +1,7 @@
 import React from "react";
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaReact,
-  FaSass,
-  FaGitAlt,
-  FaNpm,
-  FaNodeJs,
-} from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaSass, FaGitAlt, FaNpm, FaNodeJs } from "react-icons/fa";
 import { SiTailwindcss, SiRedux, SiTypescript, SiVite } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const tools = [
   { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
@@ -26,28 +18,38 @@ const tools = [
   { name: "Vite", icon: <SiVite className="text-yellow-500" /> },
 ];
 
-const ToolsSection = () => (
-  <section className="w-full py-16 relative overflow-hidden">
-    {/* Gradient Background */}
-    <div className="absolute inset-0 z-0"/>
-    {/* Content */}
-    <div className="relative z-10 max-w-5xl mx-auto px-4">
-      <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-10 drop-shadow-lg">
-        My Front-End Toolkit
-      </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
-        {tools.map((tool) => (
-          <div
-            key={tool.name}
-            className="flex flex-col items-center justify-center bg-white/70 rounded-xl shadow-md p-6 hover:scale-105 transition-transform border border-gray-100"
-          >
-            <div className="text-5xl mb-3">{tool.icon}</div>
-            <span className="text-lg font-medium text-gray-800">{tool.name}</span>
-          </div>
-        ))}
+const ToolsTicker = () => {
+  return (
+    <section className="w-full py-16 relative overflow-hidden">
+      <div className="relative z-10 max-w-7xl mx-auto px-4">
+        <h2 className="font-poppins text-4xl md:text-5xl font-semibold text-gray-900 leading-tight">
+            My <span className="relative inline-block">
+              <span className="relative z-10 text-green-700">Toolkit</span>
+              <span className="absolute inset-x-0 bottom-1 h-3 bg-yellow-500 opacity-60 z-0 rounded-sm" />
+            </span>
+          </h2>
       </div>
-    </div>
-  </section>
-);
+      <div className="overflow-hidden">
+        <motion.div
+          className="flex py-8"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+        >
+          {[...tools, ...tools].map((tool, index) => (
+            <div
+              key={`${tool.name}-${index}`}
+              className="flex flex-col items-center justify-center p-4 min-w-[120px] hover:scale-105 transition-transform"
+            >
+              <div className="text-5xl mb-2 hover:animate-bounce">{tool.icon}</div>
+              <span className="text-lg font-medium text-gray-800 whitespace-nowrap">
+                {tool.name}
+              </span>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
 
-export default ToolsSection;
+export default ToolsTicker;
