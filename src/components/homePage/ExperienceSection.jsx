@@ -25,7 +25,7 @@ const experiences = [
   },
 ];
 
-// Stagger animation config
+// Stagger animation config (keep it, nice UX)
 const container = {
   hidden: {},
   show: {
@@ -36,7 +36,7 @@ const container = {
 };
 
 const cardVariant = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 20 }, // softer slide up
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
@@ -44,9 +44,9 @@ export default function ExperienceSection() {
   return (
     <motion.section
       className="relative overflow-hidden flex flex-col p-6 md:p-16"
-      initial={{ opacity: 0, y: 60 }}
+      initial={{ opacity: 0, y: 40 }} // smooth fade & slide on section load
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
     >
       <div className="relative max-w-7xl mx-auto flex flex-col gap-12">
@@ -55,7 +55,7 @@ export default function ExperienceSection() {
           className="space-y-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true }}
         >
           <h2 className="font-poppins text-4xl md:text-5xl font-semibold text-gray-900 leading-tight">
@@ -79,15 +79,16 @@ export default function ExperienceSection() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
-          {experiences.map((exp, index) => (
+          {experiences.map((exp) => (
             <motion.a
               key={exp.title}
               href={exp.link}
               target="_blank"
+              rel="noopener noreferrer"
               variants={cardVariant}
               whileHover={{ scale: 1.04, y: -4 }}
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
-              className="group block bg-white border border-gray-200 rounded-3xl p-6 shadow-md hover:shadow-xl transition-all duration-300"
+              className="group block bg-white border border-gray-200 rounded-3xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300"
             >
               <div className="space-y-4">
                 <h3 className="text-2xl font-semibold text-gray-900">

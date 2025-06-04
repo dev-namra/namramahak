@@ -22,23 +22,7 @@ const projects = [
     image:
       "https://cdn.prod.website-files.com/66d055121da6237b656b1947/66d329d85ff66494d31306e1_1400%20x%201900%20s.jpg",
     link: "https://your-portfolio.com",
-  },
-  {
-    title: "Product Designer Portfolio",
-    description:
-      "This portfolio website was designed for a product designer to highlight their work through a sleek, responsive interface. Built using React, it features dynamic project showcases, smooth animations, and a clean layout that emphasizes visual storytelling and user experience.",
-    image:
-      "https://cdn.prod.website-files.com/66d055121da6237b656b1947/66d329d85ff66494d31306e1_1400%20x%201900%20s.jpg",
-    link: "https://your-portfolio.com",
-  },
-  {
-    title: "Product Designer Portfolio",
-    description:
-      "This portfolio website was designed for a product designer to highlight their work through a sleek, responsive interface. Built using React, it features dynamic project showcases, smooth animations, and a clean layout that emphasizes visual storytelling and user experience.",
-    image:
-      "https://cdn.prod.website-files.com/66d055121da6237b656b1947/66d329d85ff66494d31306e1_1400%20x%201900%20s.jpg",
-    link: "https://your-portfolio.com",
-  },
+  }
 ];
 
 const ProjectsSection = () => (
