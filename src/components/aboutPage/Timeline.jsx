@@ -56,7 +56,7 @@ const Timeline = () => (
               {timelineData.map((item, idx) => (
                 <div key={idx} className="relative flex items-start">
                   {/* Dot */}
-                  <div className="absolute left-6 top-2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white z-10 -translate-x-1/2" />
+                  <div className="absolute left-6 top-2 w-4 h-4 bg-blue-600 rounded-full z-10 -translate-x-1/2" />
 
                   {/* Content */}
                   <div className="ml-16">
