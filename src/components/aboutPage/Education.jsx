@@ -1,6 +1,6 @@
 const Education = () => (
   <section>
-    <div className="container max-w-5xl px-4 py-12 mx-auto">
+    <div className="container w-full py-12 mx-auto">
       <div className="grid gap-4 mx-4 sm:grid-cols-12">
         {/* Section Header */}
         <div className="col-span-12 sm:col-span-3">
@@ -13,7 +13,7 @@ const Education = () => (
         </div>
 
         {/* Timeline Entries */}
-        <div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
+        <div className="relative col-span-12 space-y-6 sm:col-span-9">
           <div className="col-span-12 relative px-4 space-y-12 sm:space-y-8 before:absolute before:top-2 before:bottom-0 before:w-0.5 before:left-[6px] sm:before:left-[-12px] before:bg-gray-300 dark:before:bg-gray-300">
 
             {/* Entry 1 */}

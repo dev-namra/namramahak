@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Profile from "../assets/person/pp.jpg";
 import Timeline from '../components/aboutPage/Timeline';
 import Education from "../components/aboutPage/Education";
+import Testimonials from "../components/aboutPage/Testimonials";
 
 export default function AboutPage() {
   return (
@@ -68,15 +69,7 @@ export default function AboutPage() {
         </section>
 
         {/* Testimonials */}
-        <section className="flex flex-col gap-4">
-          <h2 className="text-3xl font-semibold text-gray-900 font-poppins">
-            What Others Say
-          </h2>
-          <blockquote className="bg-gray-100 p-4 rounded-lg italic text-gray-700">
-            "Namra is a rare blend of creative and technical expertise. Her work is not only visually polished but also highly functional."
-            <footer className="mt-2 text-sm text-gray-500">– Former Manager, Merit</footer>
-          </blockquote>
-        </section>
+        <Testimonials />
 
         {/* Interests */}
         <section className="flex flex-col gap-4">
