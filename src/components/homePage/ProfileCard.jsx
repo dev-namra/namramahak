@@ -97,9 +97,9 @@ function ProfileCard() {
           {/* CTA Button */}
           <motion.div
             className="w-full md:flex md:justify-center"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.8 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 1.5 }}
             whileHover={{ scale: 1.05 }}
           >
             <a
