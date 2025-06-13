@@ -3,7 +3,7 @@ import Profile from '../../assets/person/pp.jpg';
 
 function ProfileCard() {
   return (
-    <section className="relative overflow-hidden flex flex-col p-6 md:p-16">
+    <section className="relative overflow-hidden flex flex-col p-6 md:px-16 md:pt-16">
       <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8">
 
         {/* Text Block */}
@@ -79,10 +79,10 @@ function ProfileCard() {
         >
           As a{' '}
           <span className="relative inline-block">
-            <span className="relative z-10 text-blue-600">front-end developer </span>
+            <span className="relative z-10 text-blue-600">front-end developer,  </span>
             <span className="absolute inset-x-0 bottom-1 h-2 bg-blue-200 opacity-60 z-0 rounded-sm"></span>
           </span>
-          I build web interfaces that are fast, accessible, and visually engaging. I believe great UI isn't just about looks — it's about creating smooth, meaningful user interactions.
+           I build web interfaces that are fast, accessible, and visually engaging. I believe great UI isn't just about looks — it's about creating smooth, meaningful user interactions.
 
           <br /><br />
 
@@ -96,7 +96,7 @@ function ProfileCard() {
 
           {/* CTA Button */}
           <motion.div
-            className="w-full md:flex md:justify-center"
+            className="w-full md:flex md:justify-center py-6 md:py-12"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 1.5 }}

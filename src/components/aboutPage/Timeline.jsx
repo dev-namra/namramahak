@@ -51,7 +51,7 @@ const Timeline = () => (
         <div className="col-span-12 sm:col-span-9">
           <div className="relative flex flex-col">
             {/* Vertical line */}
-            <div className="absolute left-6 top-0 w-0.5 h-full bg-gray-300 dark:bg-gray-600 z-0" />
+            <div className="absolute left-6 top-2 w-0.5 h-full bg-gray-300 dark:bg-gray-600 z-0" />
             <div className="flex flex-col space-y-12">
               {timelineData.map((item, idx) => (
                 <div key={idx} className="relative flex items-start">

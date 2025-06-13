@@ -38,7 +38,7 @@ export default function Navbar() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "about", label: "About me" },
-    { href: "cases", label: "Projects" },
+    { href: "/projects", label: "Projects" },
     {
       href: "mailto:mahaknamra@gmail.com",
       label: (

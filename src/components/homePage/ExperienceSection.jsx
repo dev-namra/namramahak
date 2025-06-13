@@ -43,7 +43,7 @@ const cardVariant = {
 export default function ExperienceSection() {
   return (
     <motion.section
-      className="relative overflow-hidden flex flex-col p-6 md:p-16"
+      className="relative overflow-hidden flex flex-col p-6 md:px-16 md:pb-16"
       initial={{ opacity: 0, y: 40 }} // smooth fade & slide on section load
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}

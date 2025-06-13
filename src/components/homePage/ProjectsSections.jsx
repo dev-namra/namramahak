@@ -1,29 +1,4 @@
-const projects = [
-  {
-    title: "Ibtida Restaurant",
-    description:
-      "This web application for Ibtaida allows users to browse the menu, make reservations, and explore features seamlessly. Built on the MERN stack (MongoDB, Express, React, Node.js), it provides an intuitive interface for viewing dish details and modifying reservations.",
-    image:
-      "https://cdn.prod.website-files.com/66d055121da6237b656b1947/66d329f05748d6924d08a6d5_1400%20950.jpeg",
-    link: "https://your-weather-app.com",
-  },
-  {
-    title: "Product Designer Portfolio",
-    description:
-      "This portfolio website was designed for a product designer to highlight their work through a sleek, responsive interface. Built using React, it features dynamic project showcases, smooth animations, and a clean layout that emphasizes visual storytelling and user experience.",
-    image:
-      "https://cdn.prod.website-files.com/66d055121da6237b656b1947/66d329d85ff66494d31306e1_1400%20x%201900%20s.jpg",
-    link: "https://your-portfolio.com",
-  },
-  {
-    title: "Product Designer Portfolio",
-    description:
-      "This portfolio website was designed for a product designer to highlight their work through a sleek, responsive interface. Built using React, it features dynamic project showcases, smooth animations, and a clean layout that emphasizes visual storytelling and user experience.",
-    image:
-      "https://cdn.prod.website-files.com/66d055121da6237b656b1947/66d329d85ff66494d31306e1_1400%20x%201900%20s.jpg",
-    link: "https://your-portfolio.com",
-  }
-];
+import { projects } from "../projectPage/projects";
 
 const ProjectsSection = () => (
   <section className="w-full min-h-screen p-6 md:p-16">

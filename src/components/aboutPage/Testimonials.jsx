@@ -37,8 +37,8 @@ export default function Testimonials() {
 
   return (
     <div className="w-full flex justify-center items-center">
-      <section>
-        <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-24 lg:px-6">
+      <section className="w-full">
+        <div className="max-w-screen-xl p-4 mx-auto text-center lg:py-12 lg:px-6">
           <AnimatePresence mode="wait">
             <motion.figure
               key={currentIndex}
@@ -46,7 +46,7 @@ export default function Testimonials() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.5 }}
-              className="max-w-screen-md mx-auto"
+              className="max-w-screen-md mx-auto bg-gray-100 p-8 rounded-lg shadow-md"
             >
               <svg
                 className="h-12 mx-auto mb-3 text-gray-400"
