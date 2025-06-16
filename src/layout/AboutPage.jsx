@@ -1,9 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Profile from "../assets/person/pp.jpg";
-import Timeline from '../components/aboutPage/Timeline';
+import Timeline from "../components/aboutPage/Timeline";
 import Education from "../components/aboutPage/Education";
-import Testimonials from "../components/aboutPage/Testimonials";
 import Certificates from "../components/aboutPage/Certificates";
 import Footer from "../components/common/Footer";
 
@@ -17,7 +16,6 @@ export default function AboutPage() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="max-w-6xl mx-auto px-6 md:px-16 py-12 flex flex-col gap-16">
-
           {/* Profile Section */}
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="size-48 rounded-full overflow-hidden">
@@ -33,10 +31,11 @@ export default function AboutPage() {
                 Hello, I'm Namra Mahak
               </h1>
               <p className="mt-4 text-lg text-gray-800 leading-relaxed font-light">
-                I began my journey in architecture and evolved into a Front-End Developer
-                & Automation Specialist. My passion lies in designing elegant, user-centric web interfaces,
-                automating workflows, and building meaningful digital experiences.
-                With React, Next.js, and Autodesk tools, I blend aesthetics with functionality.
+                I began my journey in architecture and evolved into a Front-End
+                Developer & Automation Specialist. My passion lies in designing
+                elegant, user-centric web interfaces, automating workflows, and
+                building meaningful digital experiences. With React, Next.js,
+                and Autodesk tools, I blend aesthetics with functionality.
               </p>
             </div>
           </div>
@@ -48,7 +47,6 @@ export default function AboutPage() {
             <Education />
           </div>
           <Certificates />
-          <Testimonials />
 
           {/* Interests */}
           <section className="flex flex-col gap-4">
@@ -56,7 +54,10 @@ export default function AboutPage() {
               Outside of Work
             </h2>
             <p className="text-gray-800 leading-relaxed font-light">
-              When I’m not designing or coding, I enjoy urban sketching, exploring architectural history, and hiking through nature trails. I also love experimenting with generative art and AI-assisted design tools.
+              When I’m not designing or coding, I enjoy urban sketching,
+              exploring architectural history, and hiking through nature trails.
+              I also love experimenting with generative art and AI-assisted
+              design tools.
             </p>
           </section>
 
@@ -86,7 +87,20 @@ export default function AboutPage() {
               Tech Stack & Skills
             </h2>
             <ul className="flex flex-wrap gap-3">
-              {["React","Next.js","Tailwind CSS","TypeScript","Node.js","Autodesk Platform Services","Power BI","Framer Motion","Responsive Design","Accessibility","Git","Figma"].map((skill) => (
+              {[
+                "React",
+                "Next.js",
+                "Tailwind CSS",
+                "TypeScript",
+                "Node.js",
+                "Autodesk Platform Services",
+                "Power BI",
+                "Framer Motion",
+                "Responsive Design",
+                "Accessibility",
+                "Git",
+                "Figma",
+              ].map((skill) => (
                 <li
                   key={skill}
                   className="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium"
@@ -107,8 +121,8 @@ export default function AboutPage() {
             </a>
           </div>
         </div>
-      </motion.main>  
-      <Footer />  
+      </motion.main>
+      <Footer />
     </section>
   );
 }

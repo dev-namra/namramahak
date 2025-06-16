@@ -8,7 +8,11 @@ module.exports = {
         bebas: ['"Bebas Neue"', 'sans-serif'],
         oswald: ['Oswald', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
-        righteous: ['Righteous', 'sans-serif']
+        righteous: ['Righteous', 'sans-serif'],
+        savate: ["Savate", 'sans-serif'],
+        spaceGrotesk: ["Space Grotesk",'sans-serif'],
+        bangers: ["Bangers", 'system-ui'],
+        Berlleigh: ["Berlleigh", 'sans-serif']
       },
       animation: {
         "float": "float 3s ease-in-out infinite",
