@@ -5,27 +5,26 @@ const experiences = [
   {
     title: "Merit",
     description:
-      "Built APS-powered web apps and Revit plugins to automate workflows. Spun up Power BI dashboards and Power Automate flows for live project insights. Now crafting a React dashboard to stream Azure digital-twin telemetry in real time.",
+      "Built APS-driven tools and dashboards to automate workflows and visualize digital twin data in real time.",
     date: "2023 – Present",
     link: "https://www.merit.co.uk/",
   },
   {
     title: "Zeppelin Design & Environments",
     description:
-      "Led end-to-end delivery of hospitality and retail interiors—clients like Jaquar & Kampai. Streamlined CAD-to-construction docs and optimized team handoffs.",
+      "Led interior design projects from concept to delivery for hospitality and retail brands.",
     date: "2018 – 2020",
     link: "https://www.zeppelindesign.in/",
   },
   {
     title: "Sconce Global",
     description:
-      "Designed high-impact exhibition booths for Honeywell, Schlumberger, Auto Expo, Def Expo & more. Managed client workshops and 3D visualizations from concept through install.",
+      "Designed and delivered exhibition spaces for global brands, handling everything from 3D visuals to client engagement.",
     date: "2014 – 2016",
     link: "https://www.sconceglobal.com/",
   },
 ];
 
-// Stagger animation config (keep it, nice UX)
 const container = {
   hidden: {},
   show: {
@@ -36,7 +35,7 @@ const container = {
 };
 
 const cardVariant = {
-  hidden: { opacity: 0, y: 20 }, // softer slide up
+  hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
@@ -44,7 +43,7 @@ export default function ExperienceSection() {
   return (
     <motion.section
       className="relative overflow-hidden flex flex-col p-6 md:px-16 md:pb-16"
-      initial={{ opacity: 0, y: 40 }} // smooth fade & slide on section load
+      initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
@@ -52,23 +51,21 @@ export default function ExperienceSection() {
       <div className="relative max-w-7xl mx-auto flex flex-col gap-12">
         {/* Section Header */}
         <motion.div
-          className="space-y-4"
-          initial={{ opacity: 0, y: 20 }}
+          className="text-center max-w-7xl mx-auto mb-10 flex flex-col gap-3"
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h2 className="font-poppins text-4xl md:text-5xl font-semibold text-gray-900 leading-tight">
-            My{" "}
+          <h2 className="font-Berlleigh text-4xl md:text-5xl font-semibold text-gray-900 leading-tight">
             <span className="relative inline-block">
-              <span className="relative z-10 text-blue-600">Experience</span>
-              <span className="absolute inset-x-0 bottom-1 h-3 bg-blue-200 opacity-60 z-0 rounded-sm" />
+              <span className="relative z-10 text-black">Experience</span>
+              <span className="absolute inset-x-0 bottom-1 h-3 bg-orange-300 opacity-60 z-0 rounded-sm" />
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-700 max-w-2xl font-righteous">
-            From building digital twins to crafting immersive brand experiences,
-            here’s how I’ve helped teams innovate and deliver.
-          </p>
+          <h3 className="font-Berlleigh text-xl text-gray-900 leading-tight">
+            Things I've Been Busy With
+          </h3>
         </motion.div>
 
         {/* Experience Cards */}
@@ -111,6 +108,16 @@ export default function ExperienceSection() {
           ))}
         </motion.div>
       </div>
+
+      <motion.div
+        className="w-full pt-24 pb-12"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        <div className="h-[1px] bg-black w-full" />
+      </motion.div>
     </motion.section>
   );
 }

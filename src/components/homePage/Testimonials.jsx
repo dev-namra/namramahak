@@ -21,18 +21,31 @@ const testimonials = [
     name: "Daniel V.",
     title: "Automation Engineer, ArchiTech",
   },
+  {
+    quote:
+      "Namra consistently delivered above expectations. Her understanding of user needs is unmatched.",
+    name: "Sophia Lee",
+    title: "UX Lead, CodeVerse",
+  },
+  {
+    quote:
+      "Her ability to turn complex problems into elegant designs is outstanding. Highly recommended!",
+    name: "Rahul S.",
+    title: "CTO, NovaSoft",
+  },
 ];
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(1); // 1 for next, -1 for prev
+  const [direction, setDirection] = useState(1);
 
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
     }, 4000);
+
     return () => clearInterval(interval);
-  }, []);
+  }, [currentIndex]);
 
   const handleNext = () => {
     setDirection(1);
@@ -50,7 +63,7 @@ export default function Testimonials() {
     <section className="py-16 px-4 flex flex-col gap-14">
       {/* Heading */}
       <motion.div
-        className="text-center max-w-7xl mx-auto mb-10"
+        className="text-center max-w-7xl mx-auto mb-10 flex flex-col gap-3"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.5 }}
@@ -58,10 +71,13 @@ export default function Testimonials() {
       >
         <h2 className="font-Berlleigh text-4xl md:text-5xl font-semibold text-gray-900 leading-tight">
           <span className="relative inline-block">
-            <span className="relative z-10 text-blue-600">Testimonials</span>
+            <span className="relative z-10 text-black">Testimonials</span>
             <span className="absolute inset-x-0 bottom-1 h-3 bg-blue-200 opacity-60 z-0 rounded-sm" />
           </span>
         </h2>
+        <h3 className="font-Berlleigh text-xl text-gray-900 leading-tight">
+          What people I've worked with have said about me.
+        </h3>
       </motion.div>
 
       {/* Main wrapper to handle arrows outside the card */}
@@ -84,7 +100,7 @@ export default function Testimonials() {
               initial={{ opacity: 0, x: direction > 0 ? 40 : -40 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: direction > 0 ? -40 : 40 }}
-              transition={{ duration: 0.9, ease: "easeInOut" }}
+              transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }}
               className="p-8 rounded-xl text-center"
             >
               <svg
@@ -98,7 +114,7 @@ export default function Testimonials() {
                   fill="currentColor"
                 />
               </svg>
-              <blockquote className="text-xl md:text-2xl font-medium text-gray-900">
+              <blockquote className="text-xl md:text-2xl font-medium text-gray-900 font-spaceGrotesk">
                 "{testimonials[currentIndex].quote}"
               </blockquote>
               <figcaption className="mt-6 flex justify-center items-center space-x-2 text-gray-700 text-sm">
@@ -138,9 +154,15 @@ export default function Testimonials() {
           />
         ))}
       </div>
-      <div className="w-full py-4">
+      <motion.div
+        className="w-full pt-24 pb-12"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
         <div className="h-[1px] bg-black w-full" />
-      </div>
+      </motion.div>
     </section>
   );
 }

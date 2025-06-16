@@ -38,7 +38,7 @@ function ProfileCard() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="font-Berlleigh text-[40px] text-black leading-tight">
+          <h1 className="font-Berlleigh text-4xl md:text-[40px] text-black leading-tight">
             Hi,{" "}
             <span className="inline-block relative">
               <span className="relative z-10">I'm</span>{" "}
@@ -52,7 +52,7 @@ function ProfileCard() {
               </motion.span>
             </span>
           </h1>
-          <p className="text-xl md:text-2xl max-w-3xl text-black font-spaceGrotesk text-center">
+          <p className="text-lg md:text-2xl max-w-3xl text-black font-spaceGrotesk text-center">
             Front-End Developer who builds responsive, clean UI with performance
             and pixel perfection at the core.
           </p>
@@ -60,7 +60,7 @@ function ProfileCard() {
 
         {/* CTA Button */}
         <motion.div
-          className="w-full md:flex md:justify-center py-6"
+          className="w-full md:flex md:justify-center p-6"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
@@ -81,13 +81,13 @@ function ProfileCard() {
 
         {/* Experience Summary */}
         <motion.div
-          className="flex flex-col md:flex-row gap-14"
+          className="flex flex-col md:flex-row gap-8 items-center"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
         >
           {/* Years of Experience */}
-          <div className="font-Berlleigh text-3xl">
+          <div className="font-Berlleigh text-3xl text-center">
             <div>
               <CountUp to={5} suffix="+" />
             </div>
@@ -97,10 +97,11 @@ function ProfileCard() {
             </div>
           </div>
 
-          <div className="w-[1px] h-16 bg-black" />
+          {/* Responsive Line */}
+          <div className="bg-black md:w-[1px] md:h-16 w-16 h-[1px]" />
 
           {/* Projects Delivered */}
-          <div className="font-Berlleigh text-3xl">
+          <div className="font-Berlleigh text-3xl text-center">
             <div>
               <CountUp to={7} suffix="+" />
             </div>
@@ -110,10 +111,11 @@ function ProfileCard() {
             </div>
           </div>
 
-          <div className="w-[1px] h-16 bg-black" />
+          {/* Responsive Line */}
+          <div className="bg-black md:w-[1px] md:h-16 w-16 h-[1px]" />
 
           {/* Industries Served */}
-          <div className="font-Berlleigh text-3xl">
+          <div className="font-Berlleigh text-3xl text-center">
             <div>
               <CountUp to={3} />
             </div>
@@ -123,10 +125,11 @@ function ProfileCard() {
             </div>
           </div>
 
-          <div className="w-[1px] h-16 bg-black" />
+          {/* Responsive Line */}
+          <div className="bg-black md:w-[1px] md:h-16 w-16 h-[1px]" />
 
           {/* Client Satisfaction */}
-          <div className="font-Berlleigh text-3xl">
+          <div className="font-Berlleigh text-3xl text-center">
             <div>
               <CountUp to={100} suffix="%" />
             </div>
@@ -138,9 +141,15 @@ function ProfileCard() {
         </motion.div>
       </div>
 
-      <div className="w-full py-4">
+      <motion.div
+        className="w-full pt-24 pb-12"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
         <div className="h-[1px] bg-black w-full" />
-      </div>
+      </motion.div>
     </section>
   );
 }
