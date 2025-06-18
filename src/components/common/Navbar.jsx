@@ -1,10 +1,9 @@
 "use client";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Framer Motion variants for overlay and items
 const overlayVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -34,10 +33,12 @@ const itemVariants = {
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "about", label: "About me" },
+    { href: "/about", label: "About me" },
     { href: "/projects", label: "Projects" },
     {
       href: "mailto:mahaknamra@gmail.com",
@@ -73,7 +74,11 @@ export default function Navbar() {
                 <Link
                   key={i}
                   to={link.href}
-                  className="text-black hover:underline px-3 py-2"
+                  className={`px-3 py-2 rounded-md text-sm font-medium ${
+                    currentPath === link.href
+                      ? "bg-black text-white"
+                      : "text-black hover:underline"
+                  }`}
                 >
                   {link.label}
                 </Link>
@@ -141,7 +146,11 @@ export default function Navbar() {
                   {!link.isMail ? (
                     <Link
                       to={link.href}
-                      className="text-black hover:underline text-3xl font-semibold"
+                      className={`text-3xl font-semibold px-4 py-2 rounded-md ${
+                        currentPath === link.href
+                          ? "bg-black text-white"
+                          : "text-black hover:underline"
+                      }`}
                       onClick={() => setIsOpen(false)}
                     >
                       {link.label}

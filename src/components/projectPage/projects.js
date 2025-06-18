@@ -1,29 +1,57 @@
 export const projects = [
   {
-    title: "Ibtida Restaurant",
+    id: "spark-construct",
+    title: "Spark Construct",
     description:
-      "A MERN-based restaurant app where users can browse menus, make reservations, and explore dishes with a smooth UX.",
+      "Spark Construct is a powerful web application built on Autodesk Platform Services, designed to streamline and enhance the way teams collaborate, manage, and review digital design projects.",
     image:
       "https://cdn.prod.website-files.com/66d055121da6237b656b1947/66d329f05748d6924d08a6d5_1400%20950.jpeg",
-    link: "https://your-weather-app.com",
+    isCaseStudy: true,
+    link: null, 
     type: "Full Stack",
   },
   {
-    title: "Product Designer Portfolio",
+    id: "iot-atlas",
+    title: "IoT Atlas",
     description:
-      "A sleek portfolio website for a product designer with responsive design, animations, and a project showcase.",
+      "IoT Atlas is a robust platform for aggregating, visualizing, and managing IoT device data in real time, providing actionable insights for smart environments.",
     image:
       "https://cdn.prod.website-files.com/66d055121da6237b656b1947/66d329d85ff66494d31306e1_1400%20x%201900%20s.jpg",
-    link: "https://your-portfolio.com",
+    isCaseStudy: true,
+    link: null, 
     type: "Frontend",
   },
   {
-    title: "Another Portfolio Project",
+    id: "my-portfolio",
+    title: "Personal Portfolio",
     description:
-      "A second version of a portfolio site focusing on user experience and accessibility.",
+      "A modern, responsive portfolio website to showcase my work, skills, and projects, with a focus on user experience and accessibility.",
     image:
       "https://cdn.prod.website-files.com/66d055121da6237b656b1947/66d329d85ff66494d31306e1_1400%20x%201900%20s.jpg",
-    link: "https://your-portfolio.com",
-    type: "Frontend",
+    link: "https://dev-namra.github.io/namramahak/",
+    isCaseStudy: false,
+    type: "Full Stack",
+  },
+  {
+    id: "ibtida-restaurant",
+    title: "Ibtida Restaurant",
+    description:
+      "A restaurant website featuring a digital menu, online ordering, and a visually engaging design for a seamless customer experience.",
+    image:
+      "https://cdn.prod.website-files.com/66d055121da6237b656b1947/66d329d85ff66494d31306e1_1400%20x%201900%20s.jpg",
+    link: "https://ibtida.netlify.app/",
+    isCaseStudy: false,
+    type: "Full Stack",
+  },
+  {
+    id: "bmi-calculator",
+    title: "BMI Calculator",
+    description:
+      "A simple and intuitive BMI calculator app built with Tailwind CSS, allowing users to quickly assess their body mass index.",
+    image:
+      "https://cdn.prod.website-files.com/66d055121da6237b656b1947/66d329d85ff66494d31306e1_1400%20x%201900%20s.jpg",
+    link: "https://bmicalculator-tailwind.netlify.app/",
+    isCaseStudy: false,
+    type: "Full Stack",
   },
 ];
