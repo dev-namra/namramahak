@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import SparkHeroImage from "../../../src/assets/projects/spark/sparkHero.jpg";
 import OverviewSection from "./spark/OverviewSection";
@@ -142,27 +141,6 @@ const SparkConstructCaseStudy = ({ project }) => {
         <StepsWithImages />
       </Section>
 
-      <Section title="Advantages">
-        <h2 className="text-2xl font-semibold mb-2">Key Advantages</h2>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            No Revit License Required: Considerable cost savings for teams.
-          </li>
-          <li>
-            No Specialized Skills Needed: Web-based, with a gentle learning
-            curve.
-          </li>
-          <li>
-            Faster Model Loading: Significantly improves productivity and
-            reduces downtime.
-          </li>
-          <li>
-            Cost-Effective Subscription: Only deployment and a general
-            subscription fee, no per-user costs.
-          </li>
-        </ul>
-      </Section>
-
       <Section title="Features">
         <h2 className="text-2xl font-semibold mb-2">Features & Capabilities</h2>
         <ul className="list-disc list-inside space-y-2">
@@ -184,10 +162,6 @@ const SparkConstructCaseStudy = ({ project }) => {
             elements for better understanding and team communication.
           </li>
           <li>
-            <strong>Real-Time Collaboration:</strong> Collaborate in real-time,
-            ensuring everyone is up-to-date and reducing delays.
-          </li>
-          <li>
             <strong>Centralized Data Management:</strong> Store all project data
             in one place for easy access and management.
           </li>
@@ -198,34 +172,7 @@ const SparkConstructCaseStudy = ({ project }) => {
         </ul>
       </Section>
 
-      <Section title="Application Features - Technical">
-        <h2 className="text-2xl font-semibold mb-2">Technical Features</h2>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <strong>Secure BIM360 Access:</strong> Users authenticate via
-            Autodesk ID, ensuring only authorized access.
-          </li>
-          <li>
-            <strong>Dynamic Project Cards:</strong> For each hub, projects are
-            fetched and displayed as cards with interactive controls for model
-            navigation.
-          </li>
-          <li>
-            <strong>Federated Model Viewing:</strong> Users can open federated
-            models and interact with them in-browser.
-          </li>
-          <li>
-            <strong>Advanced Property Table:</strong> Loads model properties in
-            bulk, supports real-time updates, and allows filtering/highlighting
-            of assemblies and groups.
-          </li>
-        </ul>
-      </Section>
-
       <Section title="User Interface">
-        <h2 className="text-2xl font-semibold mb-2">
-          User Interface & Experience
-        </h2>
         <ul className="list-disc list-inside space-y-2">
           <li>
             <strong>Visual Design:</strong> Clean, minimalist, dark-themed
@@ -252,9 +199,6 @@ const SparkConstructCaseStudy = ({ project }) => {
       </Section>
 
       <Section title="Ideation and Development Process">
-        <h2 className="text-2xl font-semibold mb-2">
-          Ideation & Development Process
-        </h2>
         <ol className="list-decimal list-inside space-y-2">
           <li>
             <strong>Identify Needs & Challenges:</strong> Assessed existing
@@ -279,26 +223,7 @@ const SparkConstructCaseStudy = ({ project }) => {
         </ol>
       </Section>
 
-      <Section title="Deployment & Impact">
-        <h2 className="text-2xl font-semibold mb-2">Deployment & Impact</h2>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <strong>Factory Integration:</strong> Integrated with factory
-            systems, trained staff, and collected feedback for improvements.
-          </li>
-          <li>
-            <strong>Internal Teams:</strong> Customized features for different
-            teams, conducted workshops, and refined functionalities.
-          </li>
-          <li>
-            <strong>Client Access:</strong> Created secure client portals for
-            real-time project visualization and feedback-driven enhancements.
-          </li>
-        </ul>
-      </Section>
-
       <Section title="Security & Privacy">
-        <h2 className="text-2xl font-semibold mb-2">Security & Privacy</h2>
         <p>
           All data access is authenticated via Autodesk ID, and the application
           is hosted on private endpoints to ensure client confidentiality. No

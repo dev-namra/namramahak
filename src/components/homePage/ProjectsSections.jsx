@@ -2,8 +2,8 @@ import { projects } from "../projectPage/projects";
 import { motion } from "framer-motion";
 
 const ProjectsSection = () => (
-  <section className="w-full min-h-screen p-6 md:p-16">
-    <div className="max-w-7xl mx-auto flex flex-col gap-16">
+  <section className="w-full min-h-screen p-6 md:py-16">
+    <div className="max-w-6xl mx-auto flex flex-col gap-16">
       <motion.div
         className="text-center max-w-7xl mx-auto mb-10 flex flex-col gap-3"
         initial={{ opacity: 0, y: 40 }}

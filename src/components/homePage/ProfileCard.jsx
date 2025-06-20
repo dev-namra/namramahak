@@ -33,7 +33,7 @@ function ProfileCard() {
       <div className="relative mx-auto flex flex-col items-center justify-center gap-8 py-12 md:py-32">
         {/* Text Block */}
         <motion.div
-          className="space-y-4 pt-4 flex flex-col items-center justify-center max-w-7xl mx-auto"
+          className="space-y-4 pt-4 flex flex-col items-center justify-center max-w-6xl mx-auto"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -140,16 +140,6 @@ function ProfileCard() {
           </div>
         </motion.div>
       </div>
-
-      <motion.div
-        className="w-full pt-24 pb-12"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ once: true }}
-      >
-        <div className="h-[1px] bg-black w-full" />
-      </motion.div>
     </section>
   );
 }

@@ -41,7 +41,7 @@ export default function Navbar() {
     { href: "/about", label: "About me" },
     { href: "/projects", label: "Projects" },
     {
-      href: "mailto:mahaknamra@gmail.com",
+      href: "/contact",
       label: (
         <>
           <img
@@ -52,7 +52,7 @@ export default function Navbar() {
           Let’s connect
         </>
       ),
-      isMail: true,
+      isContact: true,
     },
   ];
 
@@ -70,7 +70,7 @@ export default function Navbar() {
           {/* Desktop Links */}
           <div className="hidden md:flex md:items-center md:space-x-8">
             {navLinks.map((link, i) =>
-              !link.isMail ? (
+              !link.isContact ? (
                 <Link
                   key={i}
                   to={link.href}
@@ -83,9 +83,9 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ) : (
-                <a
+                <Link
                   key={i}
-                  href={link.href}
+                  to={link.href}
                   className="ml-4 inline-flex items-center px-4 py-2 border border-transparent rounded-full text-black underline hover:bg-white"
                 >
                   <img
@@ -94,7 +94,7 @@ export default function Navbar() {
                     className="w-4 h-4 invert mr-2"
                   />
                   Let’s connect
-                </a>
+                </Link>
               )
             )}
           </div>
@@ -143,7 +143,7 @@ export default function Navbar() {
                   variants={itemVariants}
                   className="w-full flex justify-center"
                 >
-                  {!link.isMail ? (
+                  {!link.isContact ? (
                     <Link
                       to={link.href}
                       className={`text-3xl font-semibold px-4 py-2 rounded-md ${
@@ -156,8 +156,8 @@ export default function Navbar() {
                       {link.label}
                     </Link>
                   ) : (
-                    <a
-                      href={link.href}
+                    <Link
+                      to={link.href}
                       className="text-black underline flex items-center text-3xl font-semibold"
                       onClick={() => setIsOpen(false)}
                     >
@@ -167,7 +167,7 @@ export default function Navbar() {
                         className="w-6 h-6 invert mr-3"
                       />
                       Let’s connect
-                    </a>
+                    </Link>
                   )}
                 </motion.li>
               ))}

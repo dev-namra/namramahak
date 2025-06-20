@@ -22,9 +22,9 @@ const StepsWithImages = () => {
     },
     {
       id: 4,
-      title: "Step 3: Model Browser",
+      title: "Step 4: Viewer",
       description:
-        "The app is automatically showing you all the users projects for each group and making them easy to browse with clickable cards. When you click on things like Go to Model,it quickly loads and displays what you selected, so you can work with your projects smoothly and easily.",
+        "Once the user selects a model from the cards, the Viewer opens and displays a main screen. Here, the user can interact with the 3D model, view specific elements, and analyze different properties.",
       image: "https://via.placeholder.com/100",
     },
   ];

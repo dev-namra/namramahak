@@ -48,7 +48,7 @@ export default function ExperienceSection() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      <div className="relative max-w-7xl mx-auto flex flex-col gap-12">
+      <div className="relative max-w-6xl mx-auto flex flex-col gap-12">
         {/* Section Header */}
         <motion.div
           className="text-center max-w-7xl mx-auto mb-10 flex flex-col gap-3"
@@ -108,16 +108,6 @@ export default function ExperienceSection() {
           ))}
         </motion.div>
       </div>
-
-      <motion.div
-        className="w-full pt-24 pb-12"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ once: true }}
-      >
-        <div className="h-[1px] bg-black w-full" />
-      </motion.div>
     </motion.section>
   );
 }
