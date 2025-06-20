@@ -1,24 +1,27 @@
 import { useParams } from "react-router-dom";
 import { projects } from "../components/projectPage/projects";
+import SparkConstructCaseStudy from "../components/projectPage/SparkConstructCaseStudy";
+import IotAtlasCaseStudy from "../components/projectPage/IotAtlasCaseStudy";
+
+// Map each case study ID to its React component
+const CASE_STUDY_COMPONENTS = {
+  "spark-construct": SparkConstructCaseStudy,
+  "iot-atlas": IotAtlasCaseStudy,
+};
 
 export default function CaseStudyPage() {
   const { id } = useParams();
+  const CaseStudyComponent = CASE_STUDY_COMPONENTS[id];
   const project = projects.find((p) => p.id === id && p.isCaseStudy);
-
-  if (!project) {
-    return <div>Case study not found.</div>;
+  if (!CaseStudyComponent || !project) {
+    return (
+      <div className="text-center text-red-500 p-10">Case study not found.</div>
+    );
   }
 
   return (
-    <main className="pt-20 p-6 min-h-screen">
-      <h1 className="text-4xl font-bold">{project.title}</h1>
-      <img
-        src={project.image}
-        alt={project.title}
-        className="my-4 rounded-lg"
-      />
-      <p className="mb-4">{project.caseStudyContent}</p>
-      {/* Add more sections as needed */}
+    <main>
+      <CaseStudyComponent project={project} />
     </main>
   );
 }

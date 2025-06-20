@@ -1,5 +1,14 @@
 import React from "react";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaSass, FaGitAlt, FaNpm, FaNodeJs } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaSass,
+  FaGitAlt,
+  FaNpm,
+  FaNodeJs,
+} from "react-icons/fa";
 import { SiTailwindcss, SiRedux, SiTypescript, SiVite } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -20,14 +29,15 @@ const tools = [
 
 const ToolsTicker = () => {
   return (
-    <section className="w-full py-16 relative overflow-hidden">
+    <section className="w-full py-16 relative overflow-hidden h-[calc(100%-6rem)]">
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         <h2 className="font-poppins text-4xl md:text-5xl font-semibold text-gray-900 leading-tight">
-            My <span className="relative inline-block">
-              <span className="relative z-10 text-green-700">Toolkit</span>
-              <span className="absolute inset-x-0 bottom-1 h-3 bg-yellow-500 opacity-60 z-0 rounded-sm" />
-            </span>
-          </h2>
+          My{" "}
+          <span className="relative inline-block">
+            <span className="relative z-10 text-green-700">Toolkit</span>
+            <span className="absolute inset-x-0 bottom-1 h-3 bg-yellow-500 opacity-60 z-0 rounded-sm" />
+          </span>
+        </h2>
       </div>
       <div className="overflow-hidden">
         <motion.div
@@ -40,7 +50,9 @@ const ToolsTicker = () => {
               key={`${tool.name}-${index}`}
               className="flex flex-col items-center justify-center p-4 min-w-[120px] hover:scale-105 transition-transform"
             >
-              <div className="text-5xl mb-2 hover:animate-bounce">{tool.icon}</div>
+              <div className="text-5xl mb-2 hover:animate-bounce">
+                {tool.icon}
+              </div>
               <span className="text-lg font-medium text-gray-800 whitespace-nowrap">
                 {tool.name}
               </span>
