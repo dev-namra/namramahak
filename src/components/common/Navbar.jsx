@@ -57,12 +57,12 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-[#fbf4ec] shadow-md z-50">
-      <nav className="max-w-6xl bg-[#fbf4ec] mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="fixed top-0 left-0 w-full bg-black shadow-md z-50">
+      <nav className="max-w-6xl bg-black mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="font-bold">
+            <Link to="/" className="font-bold text-white">
               nm.
             </Link>
           </div>
@@ -74,10 +74,10 @@ export default function Navbar() {
                 <Link
                   key={i}
                   to={link.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  className={`px-3 py-2 rounded-full text-sm font-medium ${
                     currentPath === link.href
-                      ? "bg-black text-white"
-                      : "text-black hover:underline"
+                      ? "text-white underline underline-offset-2"
+                      : "text-gray-400 hover:bg-gray-300 hover:text-black"
                   }`}
                 >
                   {link.label}
@@ -86,12 +86,12 @@ export default function Navbar() {
                 <Link
                   key={i}
                   to={link.href}
-                  className="ml-4 inline-flex items-center px-4 py-2 border border-transparent rounded-full text-black underline hover:bg-white"
+                  className="ml-4 inline-flex items-center px-4 py-2 border border-transparent rounded-full text-white hover:bg-gray-800"
                 >
                   <img
                     src="https://framerusercontent.com/images/kwWGJqjqkaDHrNQQL85ebAFUpc.svg"
                     alt="mail icon"
-                    className="w-4 h-4 invert mr-2"
+                    className="w-4 h-4 mr-2"
                   />
                   Let’s connect
                 </Link>
@@ -107,9 +107,9 @@ export default function Navbar() {
               aria-label={isOpen ? "Close menu" : "Open menu"}
             >
               {isOpen ? (
-                <XMarkIcon className="h-6 w-6 text-black" />
+                <XMarkIcon className="h-6 w-6 text-white" />
               ) : (
-                <Bars3Icon className="h-6 w-6 text-black" />
+                <Bars3Icon className="h-6 w-6 text-white" />
               )}
             </button>
           </div>
@@ -120,7 +120,7 @@ export default function Navbar() {
       <AnimatePresence mode="wait">
         {isOpen && (
           <motion.div
-            className="fixed inset-0 bg-[#fbf4ec] z-50 flex flex-col justify-center items-center p-8"
+            className="fixed inset-0 bg-black z-50 flex flex-col justify-center items-center p-8"
             variants={overlayVariants}
             initial="hidden"
             animate="visible"
@@ -133,7 +133,7 @@ export default function Navbar() {
                 className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black"
                 aria-label="Close menu"
               >
-                <XMarkIcon className="h-8 w-8 text-black" />
+                <XMarkIcon className="h-8 w-8 text-white" />
               </button>
             </div>
             <motion.ul className="mt-12 flex flex-col items-center space-y-8">
@@ -149,7 +149,7 @@ export default function Navbar() {
                       className={`text-3xl font-semibold px-4 py-2 rounded-md ${
                         currentPath === link.href
                           ? "bg-black text-white"
-                          : "text-black hover:underline"
+                          : "text-gray-400 hover:bg-gray-300 hover:text-black"
                       }`}
                       onClick={() => setIsOpen(false)}
                     >
@@ -158,13 +158,13 @@ export default function Navbar() {
                   ) : (
                     <Link
                       to={link.href}
-                      className="text-black underline flex items-center text-3xl font-semibold"
+                      className="text-gray-400 underline flex items-center text-3xl font-semibold"
                       onClick={() => setIsOpen(false)}
                     >
                       <img
                         src="https://framerusercontent.com/images/kwWGJqjqkaDHrNQQL85ebAFUpc.svg"
                         alt="mail icon"
-                        className="w-6 h-6 invert mr-3"
+                        className="w-6 h-6 mr-3"
                       />
                       Let’s connect
                     </Link>

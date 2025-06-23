@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import IotHeroImage from "../../../src/assets/projects/iot/iot-hero.png";
 import OverviewSection from "./spark/OverviewSection";
-import StepsWithImages from "./spark/StepsWithImages";
+import StepsList from "./spark/StepsList";
+import { useNavigate } from "react-router-dom";
 
 const Section = ({ title, children }) => (
   <motion.section
@@ -17,9 +18,18 @@ const Section = ({ title, children }) => (
 );
 
 const SparkConstructCaseStudy = ({ project }) => {
+  const navigate = useNavigate();
   return (
     <div className="bg-white text-gray-900">
       <section className="py-20">
+        <div className="max-w-6xl mx-auto p-6">
+          <button
+            onClick={() => navigate("/projects")}
+            className=" px-4 py-2 rounded hover:bg-gray-300 border-[2px] transition"
+          >
+            ← Back to All Projects
+          </button>
+        </div>
         <div className="max-w-6xl mx-auto px-6">
           {/* Title and Description */}
           <div className="my-12 text-center">
@@ -138,7 +148,7 @@ const SparkConstructCaseStudy = ({ project }) => {
       </Section>
 
       <Section title="How it Works">
-        <StepsWithImages />
+        <StepsList />
       </Section>
 
       <Section title="Features">

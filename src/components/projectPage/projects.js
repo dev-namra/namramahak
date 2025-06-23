@@ -1,11 +1,12 @@
+import sparkhero from '../../assets/projects/spark/SPARKHERO.png'
+
 export const projects = [
   {
     id: "spark-construct",
     title: "Spark Construct",
     description:
       "Spark Construct is a powerful web application built on Autodesk Platform Services, designed to streamline and enhance the way teams collaborate, manage, and review digital design projects.",
-    image:
-      "https://cdn.prod.website-files.com/66d055121da6237b656b1947/66d329f05748d6924d08a6d5_1400%20950.jpeg",
+    image: sparkhero,
     isCaseStudy: true,
     link: null, 
     type: "Full Stack",

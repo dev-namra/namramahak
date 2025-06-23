@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-import SparkHeroImage from "../../../src/assets/projects/spark/sparkHero.jpg";
 import OverviewSection from "./spark/OverviewSection";
-import StepsWithImages from "./spark/StepsWithImages";
+import StepsList from "./spark/StepsList";
+import { useNavigate } from "react-router-dom";
+import SparkVideo from "../../assets/projects/spark/sparkconstructor.mp4";
+import SparkPoster from "../../assets/projects/spark/SPARKHERO.png";
 
 const Section = ({ title, children }) => (
   <motion.section
@@ -17,12 +19,21 @@ const Section = ({ title, children }) => (
 );
 
 const SparkConstructCaseStudy = ({ project }) => {
+  const navigate = useNavigate();
   return (
     <div className="bg-white text-gray-900">
-      <section className="py-20">
+      <section className="pt-20 pb-8">
+        <div className="max-w-6xl mx-auto p-6">
+          <button
+            onClick={() => navigate("/projects")}
+            className=" px-4 py-2 rounded hover:bg-gray-300 border-[2px] transition"
+          >
+            ← Back to All Projects
+          </button>
+        </div>
         <div className="max-w-6xl mx-auto px-6">
           {/* Title and Description */}
-          <div className="my-12 text-center">
+          <div className="mb-12 mt-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -51,16 +62,23 @@ const SparkConstructCaseStudy = ({ project }) => {
             transition={{ duration: 0.9 }}
           >
             <img
-              src={SparkHeroImage}
+              src={project.image}
               alt={project.title}
-              className="w-full md:w-2/3 mx-auto"
+              className="w-full mx-auto"
             />
           </motion.div>
+          <div className="max-w-6xl mx-auto p-6">
+            <p className="text-center">
+              Brand names, logos, and sensitive information have been hidden or
+              blurred in accordance with confidentiality agreements and
+              regulatory guidelines.{" "}
+            </p>
+          </div>
         </div>
       </section>
 
       <Section title="Overview">
-        <OverviewSection />
+        <OverviewSection className="bg-black" />
       </Section>
 
       <Section title="Challenges & Solutions">
@@ -68,10 +86,10 @@ const SparkConstructCaseStudy = ({ project }) => {
           <table className="min-w-full border border-gray-300 divide-y divide-gray-300">
             <thead className="bg-gray-100">
               <tr>
-                <th className="px-6 py-3 text-left text-lg font-semibold text-red-600 border-r border-gray-300">
+                <th className="px-6 py-3 text-left text-lg font-semibold text-red-600 border-r border-gray-300 font-Berlleigh">
                   Challenges
                 </th>
-                <th className="px-6 py-3 text-left text-lg font-semibold text-green-600">
+                <th className="px-6 py-3 text-left text-lg font-semibold text-green-600 font-Berlleigh">
                   How Spark Construct Solved These
                 </th>
               </tr>
@@ -138,10 +156,23 @@ const SparkConstructCaseStudy = ({ project }) => {
       </Section>
 
       <Section title="How it Works">
-        <StepsWithImages />
+        <div className="flex justify-center">
+          <video
+            src={SparkVideo}
+            controls
+            controlsList="nodownload"
+            className="w-full max-w-3xl rounded-lg shadow-lg"
+            poster={SparkPoster}
+          >
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div>
+          <StepsList />
+        </div>
       </Section>
 
-      <Section title="Features">
+      {/* <Section title="Features">
         <h2 className="text-2xl font-semibold mb-2">Features & Capabilities</h2>
         <ul className="list-disc list-inside space-y-2">
           <li>
@@ -170,6 +201,87 @@ const SparkConstructCaseStudy = ({ project }) => {
             across all project stages.
           </li>
         </ul>
+      </Section> */}
+
+      <Section title="Features">
+        <div className="max-w-6xl mx-auto px-4">
+          <ul className="space-y-6">
+            <li className="bg-white p-5 rounded-lg shadow flex flex-col md:flex-row md:items-center">
+              <span className="flex-shrink-0 w-3 h-3 bg-blue-500 rounded-full mr-4 mb-2 md:mb-0" />
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  Immersive 3D Interaction
+                </h3>
+                <p className="text-gray-600">
+                  Effortlessly explore and manipulate 3D models for enhanced
+                  design accuracy and compelling project presentations.
+                </p>
+              </div>
+            </li>
+            <li className="bg-white p-5 rounded-lg shadow flex flex-col md:flex-row md:items-center">
+              <span className="flex-shrink-0 w-3 h-3 bg-blue-500 rounded-full mr-4 mb-2 md:mb-0" />
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  Seamless Data Export
+                </h3>
+                <p className="text-gray-600">
+                  Instantly export model data to Excel to streamline reporting,
+                  analysis, and sharing across teams.
+                </p>
+              </div>
+            </li>
+            <li className="bg-white p-5 rounded-lg shadow flex flex-col md:flex-row md:items-center">
+              <span className="flex-shrink-0 w-3 h-3 bg-blue-500 rounded-full mr-4 mb-2 md:mb-0" />
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  Focused Assembly Isolation
+                </h3>
+                <p className="text-gray-600">
+                  Isolate specific assemblies or groups within complex models,
+                  reducing visual clutter and enabling precision work.
+                </p>
+              </div>
+            </li>
+            <li className="bg-white p-5 rounded-lg shadow flex flex-col md:flex-row md:items-center">
+              <span className="flex-shrink-0 w-3 h-3 bg-blue-500 rounded-full mr-4 mb-2 md:mb-0" />
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  Integrated Property Insights
+                </h3>
+                <p className="text-gray-600">
+                  Access detailed properties alongside 3D elements, improving
+                  understanding and facilitating clear team communication.
+                </p>
+              </div>
+            </li>
+            <li className="bg-white p-5 rounded-lg shadow flex flex-col md:flex-row md:items-center">
+              <span className="flex-shrink-0 w-3 h-3 bg-blue-500 rounded-full mr-4 mb-2 md:mb-0" />
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  Centralized Project Data
+                </h3>
+                <p className="text-gray-600">
+                  Keep all project assets and model data organized in a single,
+                  accessible location, simplifying management and version
+                  control.
+                </p>
+              </div>
+            </li>
+            <li className="bg-white p-5 rounded-lg shadow flex flex-col md:flex-row md:items-center">
+              <span className="flex-shrink-0 w-3 h-3 bg-blue-500 rounded-full mr-4 mb-2 md:mb-0" />
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  Consistent Data Integrity
+                </h3>
+                <p className="text-gray-600">
+                  Maintain accuracy and consistency throughout every stage of
+                  your project, ensuring reliable results from concept to
+                  completion.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </Section>
 
       <Section title="User Interface">
