@@ -1,11 +1,13 @@
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const experiences = [
   {
     title: "Merit",
     description:
       "Built APS-driven tools and dashboards to automate workflows and visualize digital twin data in real time.",
+    position: "Front-End Developer",
     date: "2023 – Present",
     link: "https://www.merit.co.uk/",
   },
@@ -13,6 +15,7 @@ const experiences = [
     title: "Zeppelin Design & Environments",
     description:
       "Led interior design projects from concept to delivery for hospitality and retail brands.",
+    position: "Senior Architect",
     date: "2018 – 2020",
     link: "https://www.zeppelindesign.in/",
   },
@@ -20,6 +23,7 @@ const experiences = [
     title: "Sconce Global",
     description:
       "Designed and delivered exhibition spaces for global brands, handling everything from 3D visuals to client engagement.",
+    position: "Senior Designer",
     date: "2014 – 2016",
     link: "https://www.sconceglobal.com/",
   },
@@ -85,12 +89,15 @@ export default function ExperienceSection() {
               variants={cardVariant}
               whileHover={{ scale: 1.04, y: -4 }}
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
-              className="group block bg-white border border-gray-200 rounded-3xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="group flex flex-col h-full bg-white border border-gray-200 rounded-3xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-gray-900">
-                  {exp.title}
-                </h3>
+              <div className="flex-1 flex-col gap-y-2 space-y-2">
+                <div>
+                  <h2 className="text-2xl font-semibold text-gray-900">
+                    {exp.position}
+                  </h2>
+                  <h3 className="text-xl text-gray-900">{exp.title}</h3>
+                </div>
                 <p className="text-gray-700 text-sm leading-relaxed">
                   {exp.description}
                 </p>
@@ -106,6 +113,28 @@ export default function ExperienceSection() {
               </div>
             </motion.a>
           ))}
+        </motion.div>
+        {/* CTA Button */}
+        <motion.div
+          className="w-full md:flex md:justify-center p-6"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+          whileHover={{ scale: 1.05 }}
+        >
+          <Link
+            to="/about"
+            className="inline-flex items-center justify-center space-x-2 px-6 py-3 bg-black rounded-3xl hover:bg-gray-800 transition w-full md:w-auto"
+          >
+            <img
+              src="https://framerusercontent.com/images/kwWGJqjqkaDHrNQQL85ebAFUpc.svg"
+              alt="arrow icon"
+              className="size-4"
+            />
+            <span className="font-poppins text-lg text-white">
+              More About Me
+            </span>
+          </Link>
         </motion.div>
       </div>
     </motion.section>

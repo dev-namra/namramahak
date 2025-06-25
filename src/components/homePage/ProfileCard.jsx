@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-// CountUp Component
 const CountUp = ({ to, duration = 1000, suffix = "" }) => {
   const [count, setCount] = useState(0);
 
@@ -26,7 +26,6 @@ const CountUp = ({ to, duration = 1000, suffix = "" }) => {
   );
 };
 
-// Main ProfileCard Component
 function ProfileCard() {
   return (
     <section className="relative overflow-hidden flex flex-col">
@@ -66,8 +65,8 @@ function ProfileCard() {
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
           whileHover={{ scale: 1.05 }}
         >
-          <a
-            href="/about"
+          <Link
+            to="/resume"
             className="inline-flex items-center justify-center space-x-2 px-6 py-3 bg-black rounded-3xl hover:bg-gray-800 transition w-full md:w-auto"
           >
             <img
@@ -76,7 +75,7 @@ function ProfileCard() {
               className="size-4"
             />
             <span className="font-poppins text-lg text-white">View Resume</span>
-          </a>
+          </Link>
         </motion.div>
 
         {/* Experience Summary */}

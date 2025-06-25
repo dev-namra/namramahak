@@ -8,6 +8,7 @@ import CaseStudyPage from "./layout/CaseStudyPage";
 import ScrollToTop from "./components/common/ScrollToTop";
 import ScrollToTopButton from "./components/common/ScrollToTopButton";
 import ContactPage from "./layout/ContactPage";
+import Resume from "./layout/Resume";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/case-study/:id" element={<CaseStudyPage />} />
+        <Route path="/resume" element={<Resume />} />
       </Routes>
       <ScrollToTopButton />
     </>
