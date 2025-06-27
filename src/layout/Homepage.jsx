@@ -10,7 +10,6 @@ function Homepage() {
   return (
     <div className="pt-16">
       <ProfileCard />
-      <Divider />
       <Testimonials />
       <Divider />
       <ExperienceSection />

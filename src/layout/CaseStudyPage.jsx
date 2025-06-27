@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { projects } from "../components/projectPage/projects";
+import { projects } from "../components/common/projects.js";
 import SparkConstructCaseStudy from "../components/projectPage/SparkConstructCaseStudy";
 import IotAtlasCaseStudy from "../components/projectPage/IotAtlasCaseStudy";
 

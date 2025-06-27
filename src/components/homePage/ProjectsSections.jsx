@@ -1,9 +1,10 @@
-import { projects } from "../projectPage/projects";
+import { projects } from "../common/projects.js";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import ProjectCard from "../common/ProjectCard.jsx";
 
 const ProjectsSection = () => (
-  <section className="w-full min-h-[50vh] p-6 md:py-16">
+  <section className="w-full min-h-[50vh] p-6">
     <div className="max-w-6xl mx-auto flex flex-col gap-12">
       {/* Section Header */}
       <div className="text-center max-w-7xl mx-auto mb-8 flex flex-col gap-3">
@@ -18,86 +19,14 @@ const ProjectsSection = () => (
         </h3>
       </div>
 
-      {/* Project Cards Grid (only first 3) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-        {projects.slice(0, 3).map((project, idx) => (
-          <article
-            key={project.id || idx}
-            className="flex bg-white transition hover:shadow-xl overflow-hidden"
-          >
-            {/* Vertical Date Bar */}
-            <div className="rotate-180 p-2 [writing-mode:_vertical-lr] bg-gray-50">
-              <time
-                dateTime={project.date || "2025-01-01"}
-                className="flex items-center justify-between gap-4 text-xs font-bold text-gray-900 uppercase"
-              >
-                <span>
-                  {project.date ? project.date.split("-")[0] : "2025"}
-                </span>
-                <span className="w-px flex-1 bg-gray-900/10"></span>
-                <span>
-                  {project.date
-                    ? new Date(project.date).toLocaleString("default", {
-                        month: "short",
-                        day: "numeric",
-                      })
-                    : "Jun 20"}
-                </span>
-              </time>
-            </div>
-
-            {/* Project Image */}
-            <div className="hidden sm:block sm:basis-56 relative">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="aspect-square h-full w-full object-cover"
-              />
-            </div>
-
-            {/* Card Content */}
-            <div className="flex flex-1 flex-col justify-between">
-              <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <h3 className="font-bold text-gray-900 uppercase">
-                    {project.title}
-                  </h3>
-                </a>
-                <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
-                  {project.description}
-                </p>
-                <button className="bg-gray-400 text-black text-xs font-semibold uppercase px-2 py-1 rounded shadow">
-                  {project.type}
-                </button>
-              </div>
-              <div className="sm:flex sm:items-end sm:justify-end">
-                {project.isCaseStudy ? (
-                  <Link
-                    to={`/case-study/${project.id}`}
-                    className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold text-gray-900 uppercase transition hover:bg-yellow-400"
-                  >
-                    View Case Study
-                  </Link>
-                ) : (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold text-gray-900 uppercase transition hover:bg-yellow-400"
-                  >
-                    View Project
-                  </a>
-                )}
-              </div>
-            </div>
-          </article>
+      {/* Use ProjectCard for first 3 projects */}
+      <div className="grid grid-cols-1 gap-10">
+        {projects.slice(0, 3).map((project) => (
+          <ProjectCard key={project.id} project={project} />
         ))}
       </div>
 
+      {/* View All button */}
       <motion.div
         className="w-full md:flex md:justify-center p-6"
         initial={{ opacity: 0, y: 40 }}

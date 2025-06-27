@@ -4,7 +4,7 @@ const Divider = () => {
   return (
     <section>
       <motion.div
-        className="w-full pt-24 pb-12"
+        className="w-full py-6 md:py-8"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -16,5 +16,4 @@ const Divider = () => {
   );
 };
 
-// {/* <hr className="border-black border-t border-[0.5px] w-full my-4" /> */}
 export default Divider;

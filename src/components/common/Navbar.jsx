@@ -62,7 +62,7 @@ export default function Navbar() {
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="font-bold text-white">
+            <Link to="/" className="font-bold text-white text-2xl">
               nm.
             </Link>
           </div>

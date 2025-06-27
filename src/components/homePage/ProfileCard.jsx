@@ -28,7 +28,23 @@ const CountUp = ({ to, duration = 1000, suffix = "" }) => {
 
 function ProfileCard() {
   return (
-    <section className="relative overflow-hidden flex flex-col">
+    <section className="relative overflow-hidden flex flex-col pb-4 md:pb-8 mb-4 md:mb-8">
+      {/* Background Splash Gradient Blob */}
+      <div
+        className="absolute inset-0 -z-10 flex justify-center items-center border border-b-black"
+        aria-hidden="true"
+      >
+        <div
+          className="w-20 h-36 md:w-[600px] md:h-[700px] rounded-full bg-gradient-to-br from-[#ff80b5] to-[#9089fc] opacity-30 blur-[150px]"
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+          }}
+        />
+      </div>
+
       <div className="relative mx-auto flex flex-col items-center justify-center gap-8 py-12 md:py-32">
         {/* Text Block */}
         <motion.div
@@ -74,7 +90,9 @@ function ProfileCard() {
               alt="arrow icon"
               className="size-4"
             />
-            <span className="font-poppins text-lg text-white">View Resume</span>
+            <span className="font-spaceGrotesk text-lg text-white">
+              View Resume
+            </span>
           </Link>
         </motion.div>
 

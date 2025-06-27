@@ -1,5 +1,4 @@
 import Footer from "../components/common/Footer";
-import ResumeNamra from "../assets/ResumeNamra.pdf";
 
 const Resume = () => (
   <main className="mt-10 md:mt-20">
@@ -31,17 +30,6 @@ const Resume = () => (
               LinkedIn
             </a>
           </div>
-        </div>
-        <div>
-          <a
-            href={ResumeNamra}
-            download="Namra_Mahak_Resume.pdf"
-            className="px-4 py-2  bg-black rounded-full text-white hover:bg-gray-300 transition flex items-center z-10"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Download .pdf
-          </a>
         </div>
       </header>
 

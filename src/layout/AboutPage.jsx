@@ -5,12 +5,14 @@ import Timeline from "../components/aboutPage/Timeline";
 import Education from "../components/aboutPage/Education";
 import Certificates from "../components/aboutPage/Certificates";
 import Footer from "../components/common/Footer";
+import Interests from "../components/aboutPage/Interests";
+import { Link } from "react-router-dom";
 
 export default function AboutPage() {
   return (
     <section>
       <motion.main
-        className="pt-20 bg-[linear-gradient(360deg,_hsla(233,100%,90%,1)_0%,_hsla(0,0%,89%,1)_100%)]"
+        className="pt-20"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -27,10 +29,10 @@ export default function AboutPage() {
             </div>
 
             <div className="flex-1">
-              <h1 className="text-5xl font-bold text-gray-900 font-poppins">
+              <h1 className="text-5xl font-bold text-gray-900 font-Berlleigh">
                 Hello, I'm Namra Mahak
               </h1>
-              <p className="mt-4 text-lg text-gray-800 leading-relaxed font-light">
+              <p className="mt-4 text-lg text-gray-800 leading-relaxed font-light font-spaceGrotesk">
                 I began my journey in architecture and evolved into a Front-End
                 Developer & Automation Specialist. My passion lies in designing
                 elegant, user-centric web interfaces, automating workflows, and
@@ -48,78 +50,29 @@ export default function AboutPage() {
           </div>
           <Certificates />
 
-          {/* Interests */}
-          <section className="flex flex-col gap-4">
-            <h2 className="text-3xl font-semibold text-gray-900 font-poppins">
-              Outside of Work
-            </h2>
-            <p className="text-gray-800 leading-relaxed font-light">
-              When I’m not designing or coding, I enjoy urban sketching,
-              exploring architectural history, and hiking through nature trails.
-              I also love experimenting with generative art and AI-assisted
-              design tools.
-            </p>
-          </section>
+          <Interests />
 
-          {/* Stats */}
-          <section className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div>
-              <p className="text-3xl font-bold text-indigo-700">5+</p>
-              <p className="text-sm text-gray-600">Years of Experience</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold text-indigo-700">12+</p>
-              <p className="text-sm text-gray-600">Projects Delivered</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold text-indigo-700">3</p>
-              <p className="text-sm text-gray-600">Industries Served</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold text-indigo-700">100%</p>
-              <p className="text-sm text-gray-600">Client Satisfaction</p>
-            </div>
-          </section>
-
-          {/* Skills */}
-          <section className="flex flex-col gap-6">
-            <h2 className="text-3xl font-semibold text-gray-900 font-poppins">
-              Tech Stack & Skills
-            </h2>
-            <ul className="flex flex-wrap gap-3">
-              {[
-                "React",
-                "Next.js",
-                "Tailwind CSS",
-                "TypeScript",
-                "Node.js",
-                "Autodesk Platform Services",
-                "Power BI",
-                "Framer Motion",
-                "Responsive Design",
-                "Accessibility",
-                "Git",
-                "Figma",
-              ].map((skill) => (
-                <li
-                  key={skill}
-                  className="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium"
-                >
-                  {skill}
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          {/* Call to Action */}
-          <div className="text-center mt-8">
-            <a
-              href="/contact"
-              className="inline-block px-8 py-3 bg-indigo-600 text-white rounded-full text-lg font-semibold font-poppins hover:bg-indigo-700 transition"
+          <motion.div
+            className="w-full md:flex md:justify-center px-6 pb-6 md:pb-12"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+            whileHover={{ scale: 1.05 }}
+          >
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center space-x-2 px-6 py-3 bg-black rounded-3xl hover:bg-gray-800 transition w-full md:w-auto"
             >
-              Let's Collaborate
-            </a>
-          </div>
+              <img
+                src="https://framerusercontent.com/images/kwWGJqjqkaDHrNQQL85ebAFUpc.svg"
+                alt="arrow icon"
+                className="size-4"
+              />
+              <span className="text-lg text-white font-spaceGrotesk">
+                Let's Connect
+              </span>
+            </Link>
+          </motion.div>
         </div>
       </motion.main>
       <Footer />
