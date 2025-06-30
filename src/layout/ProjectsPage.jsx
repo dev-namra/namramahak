@@ -29,7 +29,15 @@ export default function ProjectsPage() {
 
           <div className="grid grid-cols-1 gap-10">
             {projects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+              >
+                <ProjectCard project={project} />
+              </motion.div>
             ))}
           </div>
         </div>
