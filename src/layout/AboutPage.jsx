@@ -8,6 +8,11 @@ import Footer from "../components/common/Footer";
 import Interests from "../components/aboutPage/Interests";
 import { Link } from "react-router-dom";
 
+const sectionVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
 export default function AboutPage() {
   return (
     <section>
@@ -19,7 +24,13 @@ export default function AboutPage() {
       >
         <div className="max-w-6xl mx-auto px-6 md:px-16 py-12 flex flex-col gap-16">
           {/* Profile Section */}
-          <div className="flex flex-col md:flex-row items-center gap-12">
+          <motion.div
+            className="flex flex-col md:flex-row items-center gap-12"
+            variants={sectionVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+          >
             <div className="size-48 rounded-full overflow-hidden">
               <img
                 src={Profile}
@@ -27,7 +38,6 @@ export default function AboutPage() {
                 className="w-full h-full object-cover"
               />
             </div>
-
             <div className="flex-1">
               <h1 className="text-5xl font-bold text-gray-900 font-Berlleigh">
                 Hello, I'm Namra Mahak
@@ -40,18 +50,51 @@ export default function AboutPage() {
                 and Autodesk tools, I blend aesthetics with functionality.
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex justify-center">
+          {/* Timeline Section */}
+          <motion.div
+            className="flex justify-center"
+            variants={sectionVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+          >
             <Timeline />
-          </div>
-          <div className="flex justify-center">
+          </motion.div>
+
+          {/* Education Section */}
+          <motion.div
+            className="flex justify-center"
+            variants={sectionVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+          >
             <Education />
-          </div>
-          <Certificates />
+          </motion.div>
 
-          <Interests />
+          {/* Certificates Section */}
+          <motion.div
+            variants={sectionVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+          >
+            <Certificates />
+          </motion.div>
 
+          {/* Interests Section */}
+          <motion.div
+            variants={sectionVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+          >
+            <Interests />
+          </motion.div>
+
+          {/* Let's Connect Button */}
           <motion.div
             className="w-full md:flex md:justify-center px-6 pb-6 md:pb-12"
             initial={{ opacity: 0, y: 40 }}

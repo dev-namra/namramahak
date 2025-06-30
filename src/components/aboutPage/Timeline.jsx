@@ -4,40 +4,49 @@ const timelineData = [
   {
     company: "Merit",
     title: "Frontend Developer",
-    description: `Contributing to the development of user-friendly web interfaces.
-Focused on performance, accessibility, and responsive design.
-Collaborating with designers and backend engineers to ship scalable features.`,
-    duration: "2023-present",
+    description: `• Introduced web development and digital transformation
+• Led development of Merit Spark, a secure internal web app
+• Saved £19,000+ annually by replacing legacy software
+• Developed real-time IoT dashboards and AI-powered tools
+• Automated workflows with Power Automate and Power BI`,
+    duration: "2023–Present",
+    location: "Newcastle Upon Tyne, UK",
   },
   {
     company: "Merit",
     title: "Automation Developer",
-    description: `Built internal automation tools to streamline repetitive tasks using Python and JavaScript.
-Designed intuitive UIs and improved operational efficiency across teams.`,
-    duration: "2023-2023",
+    description: `• Built automation tools using Python and JavaScript
+• Designed intuitive UIs for internal tools
+• Improved team efficiency and operational workflows`,
+    duration: "2023",
+    location: "Newcastle Upon Tyne, UK",
   },
   {
     company: "Frasers Group",
     title: "Sales Assistant",
-    description: `Engaged with customers and managed point-of-sale systems.
-Supported team in inventory and visual merchandising tasks.
-Developed customer service and retail communication skills.`,
-    duration: "2022-2023",
+    description: `• Managed point-of-sale systems and customer engagement
+• Supported inventory and visual merchandising
+• Developed customer service and retail communication skills`,
+    duration: "2022–2023",
+    location: "UK",
   },
   {
     company: "Zeppelin Design and Environments",
     title: "Senior Designer",
-    description: `Managed end-to-end design process for experiential environments.
-Collaborated with cross-functional teams and mentored junior designers.
-Delivered spatial storytelling and brand-driven design solutions.`,
-    duration: "2020-2022",
+    description: `• Led design and execution for commercial, hospitality, and retail projects
+• Coordinated with vendors and contractors
+• Streamlined documentation and increased team efficiency`,
+    duration: "2020–2022",
+    location: "India",
   },
   {
     company: "Sconce Global",
     title: "Architect",
-    description: `Led design and coordination of retail and commercial interior projects.
-Worked closely with clients and contractors to ensure design execution matched expectations.`,
-    duration: "2019-2020",
+    description: `• Created conceptual designs and presentations for major clients
+• Designed expo booths for large-scale events
+• Collaborated with cross-functional teams and delivered on tight timelines`,
+    duration: "2019–2020",
+    location: "India",
   },
 ];
 
@@ -92,7 +101,11 @@ const Timeline = () => (
                       </div>
                     </div>
                     <div className="text-slate-500 font-spaceGrotesk">
-                      {item.description}
+                      {item.description.split("\n").map((line, i) => (
+                        <div key={i} className="mt-2 flex">
+                          <span>{line}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 ))}

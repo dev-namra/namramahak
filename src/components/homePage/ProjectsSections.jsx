@@ -3,11 +3,21 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ProjectCard from "../common/ProjectCard.jsx";
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
 const ProjectsSection = () => (
   <section className="w-full min-h-[50vh] p-6">
     <div className="max-w-6xl mx-auto flex flex-col gap-12">
-      {/* Section Header */}
-      <div className="text-center max-w-7xl mx-auto mb-8 flex flex-col gap-3">
+      <motion.div
+        className="text-center mx-auto mb-10 flex flex-col gap-3"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <h2 className="font-Berlleigh text-4xl md:text-5xl font-semibold text-gray-900 leading-tight">
           <span className="relative inline-block">
             <span className="relative z-10 text-black">Projects</span>
@@ -17,12 +27,21 @@ const ProjectsSection = () => (
         <h3 className="font-Berlleigh text-xl text-gray-900 leading-tight">
           What I've Been Building
         </h3>
-      </div>
+      </motion.div>
 
-      {/* Use ProjectCard for first 3 projects */}
+      {/* Animated Project Cards */}
       <div className="grid grid-cols-1 gap-10">
-        {projects.slice(0, 3).map((project) => (
-          <ProjectCard key={project.id} project={project} />
+        {projects.slice(0, 3).map((project, index) => (
+          <motion.div
+            key={project.id}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={cardVariants}
+            transition={{ delay: index * 0.1 }}
+          >
+            <ProjectCard project={project} />
+          </motion.div>
         ))}
       </div>
 

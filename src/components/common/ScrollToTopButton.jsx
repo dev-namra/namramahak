@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
   const [bottomOffset, setBottomOffset] = useState(32);
-  const footerHeight = 160;
+  const footerHeight = 200;
 
   useEffect(() => {
     const handleScroll = () => {

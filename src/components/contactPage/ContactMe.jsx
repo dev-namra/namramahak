@@ -20,7 +20,7 @@ export default function ContactMe() {
   }
 
   return (
-    <section className="relative isolate bg-white px-6 py-12 md:py-32 min-h-screen flex items-center">
+    <section className="relative isolate bg-white px-6 py-12 md:py-20 min-h-screen flex items-center">
       {/* Background Gradient Blob */}
       <div
         className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -36,7 +36,7 @@ export default function ContactMe() {
       </div>
       <div className="mx-auto w-full max-w-2xl text-center">
         <motion.div
-          className="text-center max-w-7xl mx-auto mb-10 flex flex-col gap-3"
+          className="text-center max-w-7xl mx-auto flex flex-col gap-3"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -54,7 +54,11 @@ export default function ContactMe() {
           </h3>
         </motion.div>
 
-        <form
+        <motion.form
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           onSubmit={handleSubmit}
           className="mx-auto mt-16 max-w-xl sm:mt-20 text-left"
         >
@@ -130,38 +134,6 @@ export default function ContactMe() {
             </div>
             <div className="sm:col-span-2">
               <label
-                htmlFor="phone-number"
-                className="block text-sm font-semibold text-gray-900"
-              >
-                Phone number
-              </label>
-              <div className="mt-2.5">
-                <div className="flex rounded-md bg-white outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
-                  <select
-                    id="country"
-                    name="country"
-                    autoComplete="country"
-                    aria-label="Country"
-                    className="w-24 rounded-md py-2 pl-3.5 pr-7 text-base text-gray-500 bg-white border-none focus:outline-none"
-                    defaultValue="UK"
-                  >
-                    <option value="UK">UK</option>
-                    <option value="US">US</option>
-                    <option value="CA">CA</option>
-                    <option value="EU">EU</option>
-                  </select>
-                  <input
-                    type="text"
-                    name="phone-number"
-                    id="phone-number"
-                    className="block min-w-0 grow py-2 pl-2 pr-3 text-base text-gray-900 placeholder:text-gray-400 bg-white border-none focus:outline-none"
-                    placeholder="1234 567890"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="sm:col-span-2">
-              <label
                 htmlFor="message"
                 className="block text-sm font-semibold text-gray-900"
               >
@@ -192,7 +164,52 @@ export default function ContactMe() {
               {state.submitting ? "Sending..." : "Let's talk"}
             </button>
           </div>
-        </form>
+        </motion.form>
+
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <p className="text-xl md:text-3xl text-gray-600 mb-4 font-Berlleigh pt -8 md:pt-12">
+            Prefer not to use the form? Reach out directly:
+          </p>
+
+          <div className="mt-10 flex justify-center gap-6">
+            <a
+              href="https://linkedin.com/in/namra-mahak"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-indigo-600"
+              aria-label="LinkedIn"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                className="w-6 h-6"
+              >
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+
+            <a
+              href="mailto:mahaknamra@gmail.com"
+              className="text-gray-600 hover:text-indigo-600"
+              aria-label="Email"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                className="w-6 h-6"
+              >
+                <path d="M12 13.5L0 6v12h24V6zM12 10L0 3h24L12 10z" />
+              </svg>
+            </a>
+          </div>
+        </motion.section>
       </div>
     </section>
   );

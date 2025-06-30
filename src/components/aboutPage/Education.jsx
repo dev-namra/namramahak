@@ -5,17 +5,14 @@ const educationData = [
     institution: "Queen's University Belfast, UK",
     degree: "MSc BIM Project Management",
     duration: "2022–2023",
-    description: `Specialized in Building Information Modelling and digital project delivery in construction.
-Developed expertise in coordinating interdisciplinary teams using BIM tools such as Revit,
-Navisworks, and Synchro. Completed a dissertation on digital twin implementation in infrastructure projects.`,
+    description: `• Specialized in Building Information Modelling and digital project delivery in construction
+• Developed expertise in coordinating interdisciplinary teams using BIM tools such as Revit, Navisworks, and Synchro`,
   },
   {
     institution: "Jamia Millia Islamia University, India",
     degree: "Bachelor of Architecture",
     duration: "2014–2019",
-    description: `Completed a five-year professional program in architecture with a focus on sustainable design,
-construction technology, and urban planning. Final thesis project explored modular housing
-solutions for urban expansion. Participated in national design competitions and architectural workshops.`,
+    description: `• Completed a five-year professional degree in architecture with a focus on sustainable design, construction technology, and urban planning`,
   },
 ];
 
@@ -70,8 +67,12 @@ const Education = () => (
                         {item.institution}
                       </div>
                     </div>
-                    <div className="text-slate-500 whitespace-pre-line font-spaceGrotesk">
-                      {item.description}
+                    <div className="text-slate-500 font-spaceGrotesk">
+                      {item.description.split("\n").map((line, i) => (
+                        <div key={i} className="mt-2 flex">
+                          <span>{line}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 ))}

@@ -1,4 +1,10 @@
 import { motion } from "framer-motion";
+import doodle1 from "../../assets/interests/doodle1.png";
+import doodle2 from "../../assets/interests/doodle2.png";
+import doodle3 from "../../assets/interests/doodle3.png";
+import doodle4 from "../../assets/interests/doodle4.jpg";
+import doodle5 from "../../assets/interests/doodle5.jpg";
+import doodle6 from "../../assets/interests/doodle6.png";
 
 const interests = [
   "doodle",
@@ -49,16 +55,21 @@ const Interests = () => (
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
     >
-      {/* Placeholder for your doodle collage */}
-      {[1, 2, 3, 4, 5, 6].map((i) => (
-        <motion.div
-          key={i}
-          className="aspect-square rounded-lg bg-slate-100 flex items-center justify-center"
-          whileHover={{ scale: 1.05 }}
-        >
-          <span className="text-slate-400 font-spaceGrotesk">Doodle {i}</span>
-        </motion.div>
-      ))}
+      {[doodle1, doodle2, doodle3, doodle4, doodle5, doodle6].map(
+        (doodle, i) => (
+          <motion.div
+            key={i}
+            className="aspect-square rounded-lg overflow-hidden bg-slate-100 flex items-center justify-center"
+            whileHover={{ scale: 1.05 }}
+          >
+            <img
+              src={doodle}
+              alt={`Doodle ${i + 1}`}
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        )
+      )}
     </motion.div>
 
     {/* Interests as Tags */}
