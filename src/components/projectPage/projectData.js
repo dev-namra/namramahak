@@ -34,6 +34,7 @@ export const projectData = {
     techStack: [
       "Figma",
       "React",
+      "TypeScript",
       "Tailwind CSS",
       "Azure Cloud",
       "Docker",

@@ -98,8 +98,11 @@ const Resume = () => (
               <ul className="list-disc list-inside ml-5">
                 <li>
                   Built using{" "}
-                  <strong>HTML, TailwindCSS, Node.js, Express</strong>, SQL, and
-                  the <strong>Autodesk Platform Services API</strong>.
+                  <strong>
+                    HTML, TailwindCSS, JavaScript, Node.js, Express
+                  </strong>
+                  , SQL, and the <strong>Autodesk Platform Services API</strong>
+                  .
                 </li>
                 <li>
                   Hosted on <strong>Azure Private Endpoints</strong>, with usage
@@ -117,7 +120,8 @@ const Resume = () => (
             </li>
             <li>
               <strong>Developed a real-time IoT dashboard</strong> using{" "}
-              <strong>React, TailwindCSS, .NET APIs</strong>, and Docker.
+              <strong>React, TypeScript, TailwindCSS, .NET APIs</strong>, and
+              Docker.
             </li>
             <li>
               <strong>Collaborating with an AI engineer</strong> on a

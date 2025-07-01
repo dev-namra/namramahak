@@ -35,7 +35,7 @@ export const projects = [
     link: null, 
     type: "Frontend",
     tags: [
-            "React", "Tailwind CSS", ".NET", "Azure DevOps", "Azure Portal", "Docker",
+            "React","TypeScript", "Tailwind CSS", ".NET", "Azure DevOps", "Azure Portal", "Docker",
             "IoT", "Real-Time Data", "Device Management", "Data Visualization"
           ]
   },
