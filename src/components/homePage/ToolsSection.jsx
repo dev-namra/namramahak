@@ -94,13 +94,9 @@ const ToolsSection = () => (
         {/* Left Section */}
         <div className="lg:w-1/3 text-center lg:text-left mb-8 md:mb-0 z-10">
           <div className="text-2xl md:text-3xl font-semibold text-gray-900 italic font-Berlleigh">
-            Building robust, scalable, and delightful digital experiences with a
-            modern tech stack I love to keep evolving.
+            Driven by curiosity and creativity, I use these technologies to turn
+            complex challenges into beautiful, functional web solutions.
           </div>
-          <p className="mt-4 text-gray-600 text-lg font-spaceGrotesk">
-            From expressive UIs to resilient backends, I use proven tools to
-            deliver quality and innovation.
-          </p>
         </div>
 
         {/* Right: Glass Cards */}

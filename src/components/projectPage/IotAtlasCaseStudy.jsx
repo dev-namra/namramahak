@@ -18,6 +18,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Pagination } from "swiper/modules";
+import Footer from "../common/Footer.jsx";
 
 const Section = ({ title, children }) => (
   <motion.section
@@ -451,6 +452,7 @@ const IotAtlasCaseStudy = ({ project }) => {
           </p>
         </div>
       </Section>
+      <Footer />
     </div>
   );
 };

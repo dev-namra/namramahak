@@ -8,13 +8,13 @@ const StepsListIoTAtlas = () => {
     },
     {
       id: 2,
-      title: "Device Onboarding",
+      title: "Device Onboarding (Admin)",
       description:
         "Add new IoT devices using guided forms with built-in validation, ensuring accurate and efficient onboarding.",
     },
     {
       id: 3,
-      title: "Real-Time Monitoring",
+      title: "Real-Time Monitoring(Reader)",
       description:
         "View live data streams from all connected devices. Instantly visualize metrics and device status on interactive dashboards.",
     },

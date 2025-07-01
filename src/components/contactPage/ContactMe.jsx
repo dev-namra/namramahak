@@ -172,7 +172,7 @@ export default function ContactMe() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <p className="text-xl md:text-3xl text-gray-600 mb-4 font-Berlleigh pt -8 md:pt-12">
+          <p className="text-xl  text-gray-600 mb-4 font-Berlleigh pt-8 md:pt-12">
             Prefer not to use the form? Reach out directly:
           </p>
 

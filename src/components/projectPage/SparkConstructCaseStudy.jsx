@@ -10,6 +10,7 @@ import StepsList from "./spark/StepsList";
 import { useNavigate } from "react-router-dom";
 import SparkVideo from "../../assets/projects/spark/sparkconstructor.mp4";
 import SparkPoster from "../../assets/projects/spark/SPARKHERO.png";
+import Footer from "../common/Footer";
 
 const Section = ({ title, children }) => (
   <motion.section
@@ -156,8 +157,8 @@ const SparkConstructCaseStudy = ({ project }) => {
 
       <Section title="Features">
         <div className="max-w-6xl mx-auto px-4">
-          <ul className="space-y-6">
-            <li className="bg-white p-5 rounded-lg shadow flex flex-col md:flex-row md:items-center">
+          <ul className="space-y-6 font-spaceGrotesk">
+            <li className="bg-white p-5 rounded-lg shadow flex flex-col md:flex-row md:items-center font-spaceGrotesk">
               <span className="flex-shrink-0 w-3 h-3 bg-blue-500 rounded-full mr-4 mb-2 md:mb-0" />
               <div>
                 <h3 className="text-lg font-semibold text-gray-800">
@@ -236,7 +237,7 @@ const SparkConstructCaseStudy = ({ project }) => {
       </Section>
 
       <Section title="User Interface">
-        <ul className="list-disc list-inside space-y-2">
+        <ul className="list-disc list-inside space-y-2 font-spaceGrotesk">
           <li>
             <strong>Visual Design:</strong> Clean, minimalist, dark-themed
             interface with white and gray accents for readability and reduced
@@ -262,7 +263,7 @@ const SparkConstructCaseStudy = ({ project }) => {
       </Section>
 
       <Section title="Ideation and Development Process">
-        <ol className="list-decimal list-inside space-y-2">
+        <ol className="list-decimal list-inside space-y-2 font-spaceGrotesk">
           <li>
             <strong>Identify Needs & Challenges:</strong> Assessed existing
             tools (like Revit), gathered feedback from various teams, and
@@ -287,7 +288,7 @@ const SparkConstructCaseStudy = ({ project }) => {
       </Section>
 
       <Section title="Security & Privacy">
-        <p>
+        <p className="font-spaceGrotesk">
           All data access is authenticated via Autodesk ID, and the application
           is hosted on private endpoints to ensure client confidentiality. No
           public links are available due to the sensitive nature of the project
@@ -296,12 +297,16 @@ const SparkConstructCaseStudy = ({ project }) => {
       </Section>
 
       <Section title="Results">
-        <p>
+        <p className="font-spaceGrotesk">
           After launch, Spark Construct saw a 75% increase in site traffic and a
           40% boost in customer inquiries. The modern design helped build trust
-          and clearly conveyed their services.
+          and clearly conveyed their services. Replaced Assemble software for
+          62+ users, saving over <strong>£19,000 annually</strong> in licensing
+          costs.
         </p>
       </Section>
+
+      <Footer />
     </div>
   );
 };

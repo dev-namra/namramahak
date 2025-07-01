@@ -46,8 +46,9 @@ export default function AboutPage() {
                 I began my journey in architecture and evolved into a Front-End
                 Developer & Automation Specialist. My passion lies in designing
                 elegant, user-centric web interfaces, automating workflows, and
-                building meaningful digital experiences. With React, Next.js,
-                and Autodesk tools, I blend aesthetics with functionality.
+                building meaningful digital experiences. My design background
+                and a seamless transition to Web Development gives me a unique
+                perspective towards my work.
               </p>
             </div>
           </motion.div>

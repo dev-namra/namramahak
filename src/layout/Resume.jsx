@@ -224,7 +224,7 @@ const Resume = () => (
           Education & Certifications
         </h2>
         <ul className="list-disc list-inside text-gray-700 font-spaceGrotesk text-base">
-          <li>BIM Project Management | Queens University, Belfast, UK</li>
+          <li> MSc BIM Project Management | Queens University, Belfast, UK</li>
           <li>
             Bachelor of Architecture | Jamia Millia Islamia University, India
           </li>

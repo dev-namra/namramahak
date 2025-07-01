@@ -40,23 +40,6 @@ export const projects = [
           ]
   },
   {
-    id: "my-portfolio",
-    title: "Personal Portfolio",
-    description:
-      "A modern, responsive portfolio website to showcase my work, skills, and projects, with a focus on user experience and accessibility.",
-    image:
-      "https://cdn.prod.website-files.com/66d055121da6237b656b1947/66d329d85ff66494d31306e1_1400%20x%201900%20s.jpg",
-      mockup: portfoliomockup,
-    link: "https://dev-namra.github.io/namramahak/",
-    isCaseStudy: false,
-    type: "Full Stack",
-    tags: [
-            "React", "Tailwind CSS", "GitHub", "Material Tailwind", "Framer Motion",
-            "Formspree", "Responsive Design"
-          ]
-
-  },
-  {
     id: "ibtida-restaurant",
     title: "Ibtida Restaurant",
     description:
@@ -70,6 +53,23 @@ export const projects = [
     tags: [
             "React", "Tailwind CSS", "GitHub", "MongoDB",
             "Browsing Menu", "Restaurant Website", "Responsive Design", "React Form Submission"
+          ]
+
+  },
+  {
+    id: "my-portfolio",
+    title: "Personal Portfolio",
+    description:
+      "A modern, responsive portfolio website to showcase my work, skills, and projects, with a focus on user experience and accessibility.",
+    image:
+      "https://cdn.prod.website-files.com/66d055121da6237b656b1947/66d329d85ff66494d31306e1_1400%20x%201900%20s.jpg",
+      mockup: portfoliomockup,
+    link: "https://dev-namra.github.io/namramahak/",
+    isCaseStudy: false,
+    type: "Full Stack",
+    tags: [
+            "React", "Tailwind CSS", "GitHub", "Material Tailwind", "Framer Motion",
+            "Formspree", "Responsive Design"
           ]
 
   },
